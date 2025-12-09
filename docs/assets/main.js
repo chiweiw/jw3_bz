@@ -1,15 +1,32 @@
 
 async function loadJson(name){
-  if(location.protocol==='file:'){
+  const fromWindow = ()=>{
     if(name==='skills' && window.SKILLS) return window.SKILLS
     if(name==='series' && window.SERIES) return window.SERIES
     if(name==='values' && window.VALUES) return window.VALUES
     if(name==='analysis' && window.ANALYSIS) return window.ANALYSIS
+    return null
+  }
+  const loadScript = (src)=> new Promise((resolve, reject)=>{
+    const s = document.createElement('script'); s.src = src; s.onload = resolve; s.onerror = reject; document.head.appendChild(s)
+  })
+  if(location.protocol==='file:'){
+    const v = fromWindow(); if(v) return v
+    await loadScript(`data/${name}.js`)
+    const v2 = fromWindow(); if(v2) return v2
+    throw new Error('加载失败')
   }
   const base = window.DATA_BASE || 'data'
-  const r = await fetch(`${base}/${name}.json`)
-  if(!r.ok) throw new Error('加载失败')
-  return await r.json()
+  try{
+    const r = await fetch(`${base}/${name}.json`)
+    if(!r.ok) throw new Error('fetch失败')
+    return await r.json()
+  }catch(e){
+    const v = fromWindow(); if(v) return v
+    try{ await loadScript(`data/${name}.js`) } catch(_) {}
+    const v2 = fromWindow(); if(v2) return v2
+    throw e
+  }
 }
 
 function text(t){return document.createTextNode(t)}

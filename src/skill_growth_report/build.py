@@ -68,13 +68,14 @@ def copy_frontend(site_dir: Path) -> None:
     assets_dir = site_dir / "assets"
     ensure_dir(assets_dir)
     (site_dir / ".nojekyll").write_text("", encoding="utf-8")
-    (site_dir / "index.html").write_text(INDEX_HTML, encoding="utf-8")
+    (site_dir / "index.html").write_text(INDEX_HTML_VUE, encoding="utf-8")
     (site_dir / "charts.html").write_text(CHARTS_HTML, encoding="utf-8")
     (assets_dir / "main.js").write_text(MAIN_JS, encoding="utf-8")
+    (assets_dir / "vue-app.js").write_text(VUE_APP_JS, encoding="utf-8")
     (assets_dir / "style.css").write_text(STYLE_CSS, encoding="utf-8")
 
 
-INDEX_HTML = """
+INDEX_HTML_VUE = """
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -82,44 +83,26 @@ INDEX_HTML = """
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>技能数据增长报告</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="assets/main.js"></script>
   <style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif}</style>
   <script>window.PAGE='index'</script>
   <script>window.DATA_BASE='data'</script>
-  <script>window.CDN_ECHARTS='https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js'</script>
-  <script>window.LOCAL_ECHARTS='assets/echarts.min.js'</script>
-  <script>(function(d,s,c,l){var e=d.createElement('script');e.src=c; e.onerror=function(){var f=d.createElement('script');f.src=l;d.head.appendChild(f)};d.head.appendChild(e)})(document,'script',window.CDN_ECHARTS,window.LOCAL_ECHARTS)</script>
+  <script>window.CDN_VUE='https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js'</script>
+  <script>window.LOCAL_VUE='assets/vue.global.prod.js'</script>
+  <script>(function(d,s,c,l){var e=d.createElement('script');e.src=c; e.onerror=function(){var f=d.createElement('script');f.src=l;d.head.appendChild(f)};d.head.appendChild(e)})(document,'script',window.CDN_VUE,window.LOCAL_VUE)</script>
   <script>(function(){if(location.protocol==='file:'){['skills','series','values','analysis'].forEach(function(n){var s=document.createElement('script');s.src='data/'+n+'.js';document.head.appendChild(s)})}})()</script>
   </head>
 <body>
   <header>
-    <h1>技能数据增长报告</h1>
-    <div class="filters">
-      <input id="q" placeholder="搜索技能名称或ID" />
-      <select id="labelType">
-        <option value="">全部类型</option>
-        <option value="消耗">消耗</option>
-        <option value="伤害">伤害</option>
-        <option value="打击">打击</option>
-        <option value="恢复">恢复</option>
-      </select>
-      <select id="sortBy">
-        <option value="">默认排序</option>
-        <option value="jumps">跃迁数量</option>
-        <option value="max">最大值</option>
-        <option value="linear">线性优先</option>
-      </select>
-    </div>
+    <nav style="display:flex;align-items:center;gap:12px">
+      <strong>技能数据增长报告</strong>
+      <a href="index.html">信息页</a>
+      <a href="charts.html">图表页</a>
+    </nav>
   </header>
   <main>
-    <table id="seriesTable">
-      <thead>
-        <tr><th>技能</th><th>序列</th><th>区间</th><th>线性</th><th>趋势</th><th>跃迁</th><th></th></tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-    <div id="details"></div>
+    <div id="app"></div>
   </main>
+  <script src="assets/vue-app.js"></script>
 </body>
 </html>
 """
@@ -161,16 +144,33 @@ CHARTS_HTML = """
 
 MAIN_JS = """
 async function loadJson(name){
-  if(location.protocol==='file:'){
+  const fromWindow = ()=>{
     if(name==='skills' && window.SKILLS) return window.SKILLS
     if(name==='series' && window.SERIES) return window.SERIES
     if(name==='values' && window.VALUES) return window.VALUES
     if(name==='analysis' && window.ANALYSIS) return window.ANALYSIS
+    return null
+  }
+  const loadScript = (src)=> new Promise((resolve, reject)=>{
+    const s = document.createElement('script'); s.src = src; s.onload = resolve; s.onerror = reject; document.head.appendChild(s)
+  })
+  if(location.protocol==='file:'){
+    const v = fromWindow(); if(v) return v
+    await loadScript(`data/${name}.js`)
+    const v2 = fromWindow(); if(v2) return v2
+    throw new Error('加载失败')
   }
   const base = window.DATA_BASE || 'data'
-  const r = await fetch(`${base}/${name}.json`)
-  if(!r.ok) throw new Error('加载失败')
-  return await r.json()
+  try{
+    const r = await fetch(`${base}/${name}.json`)
+    if(!r.ok) throw new Error('fetch失败')
+    return await r.json()
+  }catch(e){
+    const v = fromWindow(); if(v) return v
+    try{ await loadScript(`data/${name}.js`) } catch(_) {}
+    const v2 = fromWindow(); if(v2) return v2
+    throw e
+  }
 }
 
 function text(t){return document.createTextNode(t)}
@@ -321,6 +321,127 @@ th,td{border:1px solid #ddd;padding:6px 8px;text-align:left}
 thead{background:#f7f7f7}
 button{padding:6px 10px}
 input,select{padding:6px 8px}
+"""
+
+
+VUE_APP_JS = """
+const { createApp, reactive, onMounted, computed } = Vue
+
+function loadJson(name){
+  if(location.protocol==='file:'){
+    if(name==='skills' && window.SKILLS) return Promise.resolve(window.SKILLS)
+    if(name==='series' && window.SERIES) return Promise.resolve(window.SERIES)
+    if(name==='values' && window.VALUES) return Promise.resolve(window.VALUES)
+    if(name==='analysis' && window.ANALYSIS) return Promise.resolve(window.ANALYSIS)
+  }
+  const base = window.DATA_BASE || 'data'
+  return fetch(`${base}/${name}.json`).then(r=>{if(!r.ok) throw new Error('加载失败'); return r.json()})
+}
+
+function filterType(label, type){
+  if(!type) return true
+  if(type==='消耗') return label.startsWith('消耗-')
+  if(type==='伤害') return label.includes('伤害')
+  if(type==='打击') return label.includes('打击')
+  if(type==='恢复') return label.includes('恢复')
+  return true
+}
+
+function sortSeries(items, by){
+  if(by==='jumps') return items.sort((a,b)=>b.jumps-a.jumps)
+  if(by==='max') return items.sort((a,b)=>b.max-a.max)
+  if(by==='linear') return items.sort((a,b)=>Number(b.is_linear)-Number(a.is_linear))
+  return items
+}
+
+createApp({
+  setup(){
+    const state = reactive({ skills:[], series:[], values:{}, analysis:{}, q:'', type:'', sort:'' , selected:null })
+    const skillMap = computed(()=>Object.fromEntries(state.skills.map(s=>[s.skill_id,s.name])))
+    const rows = computed(()=>{
+      const items = []
+      for(const s of state.series){
+        const sid = s.series_id
+        const a = state.analysis[sid]||{}
+        const name = skillMap.value[s.skill_id]||''
+        const match = !state.q || sid.includes(state.q) || name.includes(state.q)
+        if(!match) continue
+        if(!filterType(s.label, state.type)) continue
+        const vals = state.values[sid]||[]
+        const min = vals.length? Math.min(...vals.map(v=>v.value)) : null
+        const max = vals.length? Math.max(...vals.map(v=>v.value)) : null
+        const jumps = vals.filter(v=>v.is_jump).length
+        items.push({sid,name,label:s.label,min,max,is_linear:a.is_linear||false,trend:a.trend||'mixed',jumps})
+      }
+      return sortSeries(items, state.sort)
+    })
+    const details = computed(()=>{
+      if(!state.selected) return []
+      return state.values[state.selected]||[]
+    })
+    onMounted(async ()=>{
+      const [skills, series, values, analysis] = await Promise.all([
+        loadJson('skills'), loadJson('series'), loadJson('values'), loadJson('analysis')
+      ])
+      state.skills = skills
+      state.series = series
+      state.values = values
+      state.analysis = analysis
+    })
+    return { state, rows, details }
+  },
+  template: `
+    <section>
+      <div class='filters'>
+        <input v-model.trim="state.q" placeholder="搜索技能名称或ID" />
+        <select v-model="state.type">
+          <option value="">全部类型</option>
+          <option value="消耗">消耗</option>
+          <option value="伤害">伤害</option>
+          <option value="打击">打击</option>
+          <option value="恢复">恢复</option>
+        </select>
+        <select v-model="state.sort">
+          <option value="">默认排序</option>
+          <option value="jumps">跃迁数量</option>
+          <option value="max">最大值</option>
+          <option value="linear">线性优先</option>
+        </select>
+      </div>
+      <table>
+        <thead>
+          <tr><th>技能</th><th>序列</th><th>区间</th><th>线性</th><th>趋势</th><th>跃迁</th><th></th></tr>
+        </thead>
+        <tbody>
+          <tr v-for="it in rows" :key="it.sid">
+            <td>{{ it.name }} ({{ it.sid.split(':')[0] }})</td>
+            <td>{{ it.label }}</td>
+            <td>{{ (it.min==null||it.max==null)? '-' : (it.min + ' - ' + it.max) }}</td>
+            <td>{{ it.is_linear ? '是' : '否' }}</td>
+            <td>{{ it.trend }}</td>
+            <td>{{ String(it.jumps) }}</td>
+            <td><button @click="state.selected = it.sid">展开</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:12px">
+        <table v-if="details.length">
+          <thead>
+            <tr><th>级次</th><th>值</th><th>差值</th><th>跃迁</th></tr>
+          </thead>
+          <tbody>
+            <tr v-for="v in details" :key="v.level_index">
+              <td>{{ v.level_index }}</td>
+              <td>{{ v.value }}</td>
+              <td>{{ v.diff_to_prev==null? '-' : v.diff_to_prev }}</td>
+              <td>{{ v.is_jump ? '✓' : '' }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  `
+}).mount('#app')
 """
 
 

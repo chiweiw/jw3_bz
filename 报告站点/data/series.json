@@ -1,0 +1,5385 @@
+[
+  {
+    "series_id": "30535:消耗-精神冲刺至目标面前并使自身获得一层气劲",
+    "skill_id": "30535",
+    "label": "消耗-精神冲刺至目标面前并使自身获得一层气劲",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30535:阴性内功伤害和",
+    "skill_id": "30535",
+    "label": "阴性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30535:精神打击",
+    "skill_id": "30535",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30535:消耗-精神",
+    "skill_id": "30535",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30535:阴性内功伤害",
+    "skill_id": "30535",
+    "label": "阴性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30604:消耗-精神对自身面向8尺内的5个敌方目标造成",
+    "skill_id": "30604",
+    "label": "消耗-精神对自身面向8尺内的5个敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30604:外功伤害并造成",
+    "skill_id": "30604",
+    "label": "外功伤害并造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30604:耐力打击",
+    "skill_id": "30604",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30604:耐力打击#2",
+    "skill_id": "30604",
+    "label": "耐力打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30604:外功伤害",
+    "skill_id": "30604",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30592:消耗-精神",
+    "skill_id": "30592",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30592:外功伤害和",
+    "skill_id": "30592",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30592:耐力打击",
+    "skill_id": "30592",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30592:外功伤害",
+    "skill_id": "30592",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30593:消耗-耐力",
+    "skill_id": "30593",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30593:外功伤害",
+    "skill_id": "30593",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30593:精神打击",
+    "skill_id": "30593",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30593:精神和",
+    "skill_id": "30593",
+    "label": "精神和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30593:血量",
+    "skill_id": "30593",
+    "label": "血量",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30593:外功伤害#2",
+    "skill_id": "30593",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30594:消耗-精神持续运功",
+    "skill_id": "30594",
+    "label": "消耗-精神持续运功",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30594:外功伤害",
+    "skill_id": "30594",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30594:耐力",
+    "skill_id": "30594",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30594:精神打击",
+    "skill_id": "30594",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30594:外功伤害#2",
+    "skill_id": "30594",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30595:伤害和",
+    "skill_id": "30595",
+    "label": "伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30595:耐力打击",
+    "skill_id": "30595",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30595:伤害",
+    "skill_id": "30595",
+    "label": "伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30599:耐力使自身获得外功伤害吸收护盾",
+    "skill_id": "30599",
+    "label": "耐力使自身获得外功伤害吸收护盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30599:外功伤害和",
+    "skill_id": "30599",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30599:精神打击",
+    "skill_id": "30599",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30599:耐力使自身获得外功伤害",
+    "skill_id": "30599",
+    "label": "耐力使自身获得外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30599:外功伤害",
+    "skill_id": "30599",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30603:消耗-耐力救治重伤的友方目标",
+    "skill_id": "30603",
+    "label": "消耗-耐力救治重伤的友方目标",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30603:气血值与",
+    "skill_id": "30603",
+    "label": "气血值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30603:精神值和",
+    "skill_id": "30603",
+    "label": "精神值和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30603:耐力值",
+    "skill_id": "30603",
+    "label": "耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30631:消耗-精神与",
+    "skill_id": "30631",
+    "label": "消耗-精神与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30631:耐力",
+    "skill_id": "30631",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30631:毒性伤害和",
+    "skill_id": "30631",
+    "label": "毒性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30631:耐力打击",
+    "skill_id": "30631",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30631:治疗并卸除毒性不利气劲一个",
+    "skill_id": "30631",
+    "label": "治疗并卸除毒性不利气劲一个",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30631:毒性伤害",
+    "skill_id": "30631",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30635:消耗-精神和",
+    "skill_id": "30635",
+    "label": "消耗-精神和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30606:消耗-精神",
+    "skill_id": "30606",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30606:精神打击",
+    "skill_id": "30606",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30606:精神打击#2",
+    "skill_id": "30606",
+    "label": "精神打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30608:消耗-精神回复友方目标",
+    "skill_id": "30608",
+    "label": "消耗-精神回复友方目标",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30608:气血值和",
+    "skill_id": "30608",
+    "label": "气血值和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30608:耐力值",
+    "skill_id": "30608",
+    "label": "耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30608:耐力值#2",
+    "skill_id": "30608",
+    "label": "耐力值#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30609:消耗-耐力强制解除自身被控制效果",
+    "skill_id": "30609",
+    "label": "消耗-耐力强制解除自身被控制效果",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30610:消耗-耐力解除自身被控制状态",
+    "skill_id": "30610",
+    "label": "消耗-耐力解除自身被控制状态",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30610:精神",
+    "skill_id": "30610",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30610:耐力打击",
+    "skill_id": "30610",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30611:消耗-耐力运功1秒对自身12尺范围内",
+    "skill_id": "30611",
+    "label": "消耗-耐力运功1秒对自身12尺范围内",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30614:消耗-耐力",
+    "skill_id": "30614",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30614:毒性伤害和",
+    "skill_id": "30614",
+    "label": "毒性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30614:耐力打击",
+    "skill_id": "30614",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30614:耐力打击#2",
+    "skill_id": "30614",
+    "label": "耐力打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30614:毒性伤害",
+    "skill_id": "30614",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30618:消耗-耐力对自身8尺范围内的敌方目标造成",
+    "skill_id": "30618",
+    "label": "消耗-耐力对自身8尺范围内的敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30618:外功伤害",
+    "skill_id": "30618",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30618:减少-耐力",
+    "skill_id": "30618",
+    "label": "减少-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30618:外功伤害#2",
+    "skill_id": "30618",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30621:消耗-耐力运功3秒",
+    "skill_id": "30621",
+    "label": "消耗-耐力运功3秒",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30621:内力和",
+    "skill_id": "30621",
+    "label": "内力和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30621:精神",
+    "skill_id": "30621",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30626:消耗-耐力在自身脚下生成一个半径6尺颜色随机的",
+    "skill_id": "30626",
+    "label": "消耗-耐力在自身脚下生成一个半径6尺颜色随机的",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30627:外功伤害和",
+    "skill_id": "30627",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30627:精神打击",
+    "skill_id": "30627",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30627:外功伤害",
+    "skill_id": "30627",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30620:消耗-精神对目标造成",
+    "skill_id": "30620",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30620:阴性内功伤害和",
+    "skill_id": "30620",
+    "label": "阴性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30620:精神打击",
+    "skill_id": "30620",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30620:阴性内功伤害",
+    "skill_id": "30620",
+    "label": "阴性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30642:消耗-精神",
+    "skill_id": "30642",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30642:消耗-耐力",
+    "skill_id": "30642",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30642:精神打击和",
+    "skill_id": "30642",
+    "label": "精神打击和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30642:耐力打击",
+    "skill_id": "30642",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30642:消耗-精神#2",
+    "skill_id": "30642",
+    "label": "消耗-精神#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30642:混元伤害",
+    "skill_id": "30642",
+    "label": "混元伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30642:混元伤害#2",
+    "skill_id": "30642",
+    "label": "混元伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30536:消耗-精神回复自身或目标",
+    "skill_id": "30536",
+    "label": "消耗-精神回复自身或目标",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30536:气血值",
+    "skill_id": "30536",
+    "label": "气血值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30536:精神回复效果",
+    "skill_id": "30536",
+    "label": "精神回复效果",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30536:耐力",
+    "skill_id": "30536",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30542:消耗-精神使自身内防和外防提高",
+    "skill_id": "30542",
+    "label": "消耗-精神使自身内防和外防提高",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30136:消耗-耐力对目标造成",
+    "skill_id": "30136",
+    "label": "消耗-耐力对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30136:毒性伤害",
+    "skill_id": "30136",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30136:精神打击",
+    "skill_id": "30136",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30136:精神打击#2",
+    "skill_id": "30136",
+    "label": "精神打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30136:毒性伤害#2",
+    "skill_id": "30136",
+    "label": "毒性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30136:混元伤害",
+    "skill_id": "30136",
+    "label": "混元伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30131:消耗-精神对目标造成",
+    "skill_id": "30131",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30131:耐力打击并对目标造成持续伤害效果",
+    "skill_id": "30131",
+    "label": "耐力打击并对目标造成持续伤害效果",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30131:仇恨值",
+    "skill_id": "30131",
+    "label": "仇恨值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30131:耐力打击并对目标造成持续伤害",
+    "skill_id": "30131",
+    "label": "耐力打击并对目标造成持续伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:消耗-精神与",
+    "skill_id": "30543",
+    "label": "消耗-精神与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:气血值",
+    "skill_id": "30543",
+    "label": "气血值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:外功伤害与",
+    "skill_id": "30543",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:耐力打击",
+    "skill_id": "30543",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:耐力打击#2",
+    "skill_id": "30543",
+    "label": "耐力打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:外功伤害与#2",
+    "skill_id": "30543",
+    "label": "外功伤害与#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:耐力打击#3",
+    "skill_id": "30543",
+    "label": "耐力打击#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:外功伤害",
+    "skill_id": "30543",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30543:外功伤害#2",
+    "skill_id": "30543",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30550:消耗-耐力获得气劲",
+    "skill_id": "30550",
+    "label": "消耗-耐力获得气劲",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30550:外功伤害",
+    "skill_id": "30550",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30550:精神打击",
+    "skill_id": "30550",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30550:外功伤害#2",
+    "skill_id": "30550",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30566:消耗-精神与",
+    "skill_id": "30566",
+    "label": "消耗-精神与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30566:耐力召唤一匹猎犬",
+    "skill_id": "30566",
+    "label": "耐力召唤一匹猎犬",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30566:毒性伤害",
+    "skill_id": "30566",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30566:毒性内功伤害",
+    "skill_id": "30566",
+    "label": "毒性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30566:毒性伤害#2",
+    "skill_id": "30566",
+    "label": "毒性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30566:毒性伤害#3",
+    "skill_id": "30566",
+    "label": "毒性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30566:毒性内功伤害#2",
+    "skill_id": "30566",
+    "label": "毒性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30566:毒性伤害#4",
+    "skill_id": "30566",
+    "label": "毒性伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30569:消耗-耐力对自身6尺范围内的敌方目标造成",
+    "skill_id": "30569",
+    "label": "消耗-耐力对自身6尺范围内的敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30569:精神打击并击退目标",
+    "skill_id": "30569",
+    "label": "精神打击并击退目标",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30569:耐力打击",
+    "skill_id": "30569",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30569:外功伤害",
+    "skill_id": "30569",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30569:外功伤害#2",
+    "skill_id": "30569",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30569:外功伤害#3",
+    "skill_id": "30569",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30573:消耗-精神值",
+    "skill_id": "30573",
+    "label": "消耗-精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30573:外功伤害",
+    "skill_id": "30573",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30573:外功伤害#2",
+    "skill_id": "30573",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30765:精神",
+    "skill_id": "30765",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30580:消耗-精神对目标造成",
+    "skill_id": "30580",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30580:阴性伤害",
+    "skill_id": "30580",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30580:精神与",
+    "skill_id": "30580",
+    "label": "精神与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30580:内力",
+    "skill_id": "30580",
+    "label": "内力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30580:耐力",
+    "skill_id": "30580",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30580:阴性伤害#2",
+    "skill_id": "30580",
+    "label": "阴性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30582:消耗-耐力",
+    "skill_id": "30582",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30582:混元伤害",
+    "skill_id": "30582",
+    "label": "混元伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30582:精神打击",
+    "skill_id": "30582",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30582:混元伤害#2",
+    "skill_id": "30582",
+    "label": "混元伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30137:消耗-耐力",
+    "skill_id": "30137",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30137:精神打击",
+    "skill_id": "30137",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30137:精神打击#2",
+    "skill_id": "30137",
+    "label": "精神打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30583:消耗-精神对前方28",
+    "skill_id": "30583",
+    "label": "消耗-精神对前方28",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30583:混元伤害",
+    "skill_id": "30583",
+    "label": "混元伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30583:混元伤害#2",
+    "skill_id": "30583",
+    "label": "混元伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30583:阴性伤害",
+    "skill_id": "30583",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30587:耐力",
+    "skill_id": "30587",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30587:消耗-耐力使自身每秒回复",
+    "skill_id": "30587",
+    "label": "消耗-耐力使自身每秒回复",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30587:气血值",
+    "skill_id": "30587",
+    "label": "气血值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30643:消耗-耐力对敌方目标造成",
+    "skill_id": "30643",
+    "label": "消耗-耐力对敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30643:阴性伤害和",
+    "skill_id": "30643",
+    "label": "阴性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30643:精神打击",
+    "skill_id": "30643",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30643:阴性伤害",
+    "skill_id": "30643",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30644:消耗-精神对目标造成",
+    "skill_id": "30644",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30644:阳性伤害",
+    "skill_id": "30644",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30644:耐力打击",
+    "skill_id": "30644",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30644:阳性伤害#2",
+    "skill_id": "30644",
+    "label": "阳性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30655:消耗-精神",
+    "skill_id": "30655",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30655:阴性伤害",
+    "skill_id": "30655",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30655:消耗-精神#2",
+    "skill_id": "30655",
+    "label": "消耗-精神#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30655:气血与",
+    "skill_id": "30655",
+    "label": "气血与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30655:耐力",
+    "skill_id": "30655",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30655:阴性伤害#2",
+    "skill_id": "30655",
+    "label": "阴性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30655:阴性伤害#3",
+    "skill_id": "30655",
+    "label": "阴性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30655:阴性伤害#4",
+    "skill_id": "30655",
+    "label": "阴性伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30673:消耗-耐力与",
+    "skill_id": "30673",
+    "label": "消耗-耐力与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30673:气血",
+    "skill_id": "30673",
+    "label": "气血",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30673:外功伤害",
+    "skill_id": "30673",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30673:外功伤害#2",
+    "skill_id": "30673",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:消耗-耐力",
+    "skill_id": "30679",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:伤害",
+    "skill_id": "30679",
+    "label": "伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:减少-耐力",
+    "skill_id": "30679",
+    "label": "减少-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:外功伤害",
+    "skill_id": "30679",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:外功伤害#2",
+    "skill_id": "30679",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:外功伤害#3",
+    "skill_id": "30679",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:伤害#2",
+    "skill_id": "30679",
+    "label": "伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:外功伤害#4",
+    "skill_id": "30679",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30679:外功伤害#5",
+    "skill_id": "30679",
+    "label": "外功伤害#5",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30692:消耗-精神对目标造成",
+    "skill_id": "30692",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30692:阳性伤害",
+    "skill_id": "30692",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30692:阳性伤害#2",
+    "skill_id": "30692",
+    "label": "阳性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30692:内力",
+    "skill_id": "30692",
+    "label": "内力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30692:耐力打击",
+    "skill_id": "30692",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30692:阳性伤害#3",
+    "skill_id": "30692",
+    "label": "阳性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30692:阳性伤害#4",
+    "skill_id": "30692",
+    "label": "阳性伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30693:消耗-精神",
+    "skill_id": "30693",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30693:耐力打击和",
+    "skill_id": "30693",
+    "label": "耐力打击和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30693:阳性伤害并眩晕目标5秒",
+    "skill_id": "30693",
+    "label": "阳性伤害并眩晕目标5秒",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30693:阳性伤害",
+    "skill_id": "30693",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30693:阳性伤害#2",
+    "skill_id": "30693",
+    "label": "阳性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30693:阳性伤害#3",
+    "skill_id": "30693",
+    "label": "阳性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30696:外功伤害",
+    "skill_id": "30696",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30696:外功伤害#2",
+    "skill_id": "30696",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30698:耐力转化为",
+    "skill_id": "30698",
+    "label": "耐力转化为",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30698:精神",
+    "skill_id": "30698",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30698:精神转为",
+    "skill_id": "30698",
+    "label": "精神转为",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30698:耐力",
+    "skill_id": "30698",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30702:消耗-耐力对目标方向上的第一个敌方目标造成",
+    "skill_id": "30702",
+    "label": "消耗-耐力对目标方向上的第一个敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30702:毒性伤害和",
+    "skill_id": "30702",
+    "label": "毒性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30702:精神打击",
+    "skill_id": "30702",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30702:毒性伤害",
+    "skill_id": "30702",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30700:耐力并持续回复气血值",
+    "skill_id": "30700",
+    "label": "耐力并持续回复气血值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30705:气血值和",
+    "skill_id": "30705",
+    "label": "气血值和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30705:内力值",
+    "skill_id": "30705",
+    "label": "内力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30705:消耗-精神值和",
+    "skill_id": "30705",
+    "label": "消耗-精神值和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30705:耐力值同时使自身获得1层",
+    "skill_id": "30705",
+    "label": "耐力值同时使自身获得1层",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30714:消耗-精神和",
+    "skill_id": "30714",
+    "label": "消耗-精神和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30714:耐力在自身脚下种下一颗种子",
+    "skill_id": "30714",
+    "label": "耐力在自身脚下种下一颗种子",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30701:消耗-耐力",
+    "skill_id": "30701",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30701:外功伤害",
+    "skill_id": "30701",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30701:外功伤害#2",
+    "skill_id": "30701",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30766:消耗-精神",
+    "skill_id": "30766",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30766:气血值和",
+    "skill_id": "30766",
+    "label": "气血值和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30766:耐力",
+    "skill_id": "30766",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30766:气血值和#2",
+    "skill_id": "30766",
+    "label": "气血值和#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30766:耐力#2",
+    "skill_id": "30766",
+    "label": "耐力#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30766:气血值和#3",
+    "skill_id": "30766",
+    "label": "气血值和#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30766:耐力#3",
+    "skill_id": "30766",
+    "label": "耐力#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:消耗-精神对目标造成",
+    "skill_id": "30665",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:外功伤害",
+    "skill_id": "30665",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:耐力打击并对目标每2秒造成",
+    "skill_id": "30665",
+    "label": "耐力打击并对目标每2秒造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:阳性内功伤害",
+    "skill_id": "30665",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:外功伤害#2",
+    "skill_id": "30665",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:气血值",
+    "skill_id": "30665",
+    "label": "气血值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:外功伤害#3",
+    "skill_id": "30665",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:阳性内功伤害#2",
+    "skill_id": "30665",
+    "label": "阳性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30665:外功伤害#4",
+    "skill_id": "30665",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30670:消耗-耐力",
+    "skill_id": "30670",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30670:气血值与",
+    "skill_id": "30670",
+    "label": "气血值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30670:精神值",
+    "skill_id": "30670",
+    "label": "精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30670:精神",
+    "skill_id": "30670",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30676:消耗-耐力",
+    "skill_id": "30676",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30676:阴性内功伤害与",
+    "skill_id": "30676",
+    "label": "阴性内功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30676:精神打击",
+    "skill_id": "30676",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30676:精神值",
+    "skill_id": "30676",
+    "label": "精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30676:阴性内功伤害",
+    "skill_id": "30676",
+    "label": "阴性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30687:消耗-精神对自身8尺范围内的8个敌方目标造成",
+    "skill_id": "30687",
+    "label": "消耗-精神对自身8尺范围内的8个敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30687:阴性内功伤害与",
+    "skill_id": "30687",
+    "label": "阴性内功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30687:精神打击",
+    "skill_id": "30687",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30687:阴性内功伤害",
+    "skill_id": "30687",
+    "label": "阴性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30741:消耗-耐力对指定区域扔出一个钱袋",
+    "skill_id": "30741",
+    "label": "消耗-耐力对指定区域扔出一个钱袋",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30741:毒性内功伤害和",
+    "skill_id": "30741",
+    "label": "毒性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30741:精神打击",
+    "skill_id": "30741",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30741:阳性内功伤害",
+    "skill_id": "30741",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30741:毒性内功伤害",
+    "skill_id": "30741",
+    "label": "毒性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30741:阳性内功伤害#2",
+    "skill_id": "30741",
+    "label": "阳性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30747:消耗-耐力与精神",
+    "skill_id": "30747",
+    "label": "消耗-耐力与精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30747:气血值回复",
+    "skill_id": "30747",
+    "label": "气血值回复",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30747:耐力回复",
+    "skill_id": "30747",
+    "label": "耐力回复",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30747:精神回复",
+    "skill_id": "30747",
+    "label": "精神回复",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30747:混元内功伤害",
+    "skill_id": "30747",
+    "label": "混元内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30747:耐力打击",
+    "skill_id": "30747",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30747:精神打击",
+    "skill_id": "30747",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30747:混元内功伤害#2",
+    "skill_id": "30747",
+    "label": "混元内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30755:消耗-精神值救治一名重伤玩家",
+    "skill_id": "30755",
+    "label": "消耗-精神值救治一名重伤玩家",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30755:精神和耐力值",
+    "skill_id": "30755",
+    "label": "精神和耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30781:消耗-精神与",
+    "skill_id": "30781",
+    "label": "消耗-精神与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30781:耐力",
+    "skill_id": "30781",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30782:消耗-耐力",
+    "skill_id": "30782",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30782:精神和",
+    "skill_id": "30782",
+    "label": "精神和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30782:气血值",
+    "skill_id": "30782",
+    "label": "气血值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30782:精神和#2",
+    "skill_id": "30782",
+    "label": "精神和#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30782:气血值#2",
+    "skill_id": "30782",
+    "label": "气血值#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30785:消耗-耐力",
+    "skill_id": "30785",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30785:外功伤害",
+    "skill_id": "30785",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30785:耐力打击",
+    "skill_id": "30785",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30785:外功伤害#2",
+    "skill_id": "30785",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30787:消耗-耐力",
+    "skill_id": "30787",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30787:外功伤害",
+    "skill_id": "30787",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30787:外功伤害和",
+    "skill_id": "30787",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30787:耐力打击并附加减速效果",
+    "skill_id": "30787",
+    "label": "耐力打击并附加减速效果",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30787:外功伤害#2",
+    "skill_id": "30787",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30787:外功伤害#3",
+    "skill_id": "30787",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30787:外功伤害#4",
+    "skill_id": "30787",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30787:外功伤害#5",
+    "skill_id": "30787",
+    "label": "外功伤害#5",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30792:消耗-耐力",
+    "skill_id": "30792",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30792:精神",
+    "skill_id": "30792",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30793:消耗-耐力",
+    "skill_id": "30793",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30793:外功伤害",
+    "skill_id": "30793",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30793:精神打击",
+    "skill_id": "30793",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30793:精神",
+    "skill_id": "30793",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30793:外功伤害#2",
+    "skill_id": "30793",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30793:外功伤害#3",
+    "skill_id": "30793",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30793:外功伤害#4",
+    "skill_id": "30793",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30804:消耗-精神",
+    "skill_id": "30804",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30804:气血值与",
+    "skill_id": "30804",
+    "label": "气血值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30804:内力",
+    "skill_id": "30804",
+    "label": "内力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30807:消耗-耐力",
+    "skill_id": "30807",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30807:精神",
+    "skill_id": "30807",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30809:外功伤害",
+    "skill_id": "30809",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30809:外功伤害#2",
+    "skill_id": "30809",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30810:消耗-耐力",
+    "skill_id": "30810",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30810:混元内功伤害和",
+    "skill_id": "30810",
+    "label": "混元内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30810:精神打击",
+    "skill_id": "30810",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30810:混元内功伤害",
+    "skill_id": "30810",
+    "label": "混元内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30815:消耗-耐力",
+    "skill_id": "30815",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30815:精神",
+    "skill_id": "30815",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30815:阳性内功伤害",
+    "skill_id": "30815",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30815:阳性内功伤害#2",
+    "skill_id": "30815",
+    "label": "阳性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30822:消耗-精神",
+    "skill_id": "30822",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30822:阳性内功伤害和",
+    "skill_id": "30822",
+    "label": "阳性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30822:耐力打击",
+    "skill_id": "30822",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30822:阳性内功伤害",
+    "skill_id": "30822",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:消耗-精神对目标造成",
+    "skill_id": "30945",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:毒性内功伤害",
+    "skill_id": "30945",
+    "label": "毒性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:毒性内功伤害和",
+    "skill_id": "30945",
+    "label": "毒性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:耐力打击",
+    "skill_id": "30945",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:毒性内功伤害#2",
+    "skill_id": "30945",
+    "label": "毒性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:毒性内功伤害并持续造成毒性内功伤害和耐力打击",
+    "skill_id": "30945",
+    "label": "毒性内功伤害并持续造成毒性内功伤害和耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:精神",
+    "skill_id": "30945",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:毒性内功伤害#3",
+    "skill_id": "30945",
+    "label": "毒性内功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:毒性内功伤害#4",
+    "skill_id": "30945",
+    "label": "毒性内功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:毒性内功伤害#5",
+    "skill_id": "30945",
+    "label": "毒性内功伤害#5",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30945:毒性内功伤害并持续造成毒性内功伤害",
+    "skill_id": "30945",
+    "label": "毒性内功伤害并持续造成毒性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30947:消耗-精神",
+    "skill_id": "30947",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30947:气血值与",
+    "skill_id": "30947",
+    "label": "气血值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30947:耐力",
+    "skill_id": "30947",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30947:毒性内功伤害",
+    "skill_id": "30947",
+    "label": "毒性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30947:气血值与#2",
+    "skill_id": "30947",
+    "label": "气血值与#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30947:毒性内功伤害#2",
+    "skill_id": "30947",
+    "label": "毒性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31641:消耗-耐力",
+    "skill_id": "31641",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31641:外功伤害",
+    "skill_id": "31641",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31641:减少-精神",
+    "skill_id": "31641",
+    "label": "减少-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31641:外功伤害和",
+    "skill_id": "31641",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31641:气血值",
+    "skill_id": "31641",
+    "label": "气血值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31641:外功伤害#2",
+    "skill_id": "31641",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31641:外功伤害#3",
+    "skill_id": "31641",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:消耗-耐力向前冲刺",
+    "skill_id": "31652",
+    "label": "消耗-耐力向前冲刺",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:消耗-耐力",
+    "skill_id": "31652",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:外功伤害和",
+    "skill_id": "31652",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:精神打击",
+    "skill_id": "31652",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:外功伤害",
+    "skill_id": "31652",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:外功伤害并将其击飞",
+    "skill_id": "31652",
+    "label": "外功伤害并将其击飞",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:气血值与",
+    "skill_id": "31652",
+    "label": "气血值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:耐力",
+    "skill_id": "31652",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:外功伤害#2",
+    "skill_id": "31652",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:外功伤害#3",
+    "skill_id": "31652",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31652:外功伤害#4",
+    "skill_id": "31652",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31801:消耗-耐力",
+    "skill_id": "31801",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31801:阳性内功伤害和",
+    "skill_id": "31801",
+    "label": "阳性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31801:耐力打击",
+    "skill_id": "31801",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31801:气血值",
+    "skill_id": "31801",
+    "label": "气血值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "31801:阳性内功伤害",
+    "skill_id": "31801",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32049:消耗-精神和",
+    "skill_id": "32049",
+    "label": "消耗-精神和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32049:耐力",
+    "skill_id": "32049",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32049:阴性伤害",
+    "skill_id": "32049",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32049:阴性伤害#2",
+    "skill_id": "32049",
+    "label": "阴性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32050:消耗-精神",
+    "skill_id": "32050",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32050:伤害并对非首领和精英目标造成击退",
+    "skill_id": "32050",
+    "label": "伤害并对非首领和精英目标造成击退",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32050:精神打击",
+    "skill_id": "32050",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32050:伤害",
+    "skill_id": "32050",
+    "label": "伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32051:消耗-耐力获得红蝠掠影气劲",
+    "skill_id": "32051",
+    "label": "消耗-耐力获得红蝠掠影气劲",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32052:消耗-耐力在自身周围创建多个伤害区域",
+    "skill_id": "32052",
+    "label": "消耗-耐力在自身周围创建多个伤害区域",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32052:阳性伤害和",
+    "skill_id": "32052",
+    "label": "阳性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32052:耐力打击",
+    "skill_id": "32052",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32052:消耗-耐力在自身周围创建多个伤害",
+    "skill_id": "32052",
+    "label": "消耗-耐力在自身周围创建多个伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32052:阳性伤害",
+    "skill_id": "32052",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30142:消耗-精神对自身8尺范围内的敌方目标造成",
+    "skill_id": "30142",
+    "label": "消耗-精神对自身8尺范围内的敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30142:外功伤害",
+    "skill_id": "30142",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30142:外功伤害和",
+    "skill_id": "30142",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30142:耐力打击并使其移动速度降低50",
+    "skill_id": "30142",
+    "label": "耐力打击并使其移动速度降低50",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30142:外功伤害#2",
+    "skill_id": "30142",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30142:外功伤害#3",
+    "skill_id": "30142",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33601:消耗-耐力对敌方目标造成",
+    "skill_id": "33601",
+    "label": "消耗-耐力对敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33601:毒性伤害和",
+    "skill_id": "33601",
+    "label": "毒性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33601:精神打击",
+    "skill_id": "33601",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33601:毒性伤害",
+    "skill_id": "33601",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33602:消耗-精神对自身8尺范围内的敌方目标造成",
+    "skill_id": "33602",
+    "label": "消耗-精神对自身8尺范围内的敌方目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33602:毒性伤害",
+    "skill_id": "33602",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33602:毒性伤害和",
+    "skill_id": "33602",
+    "label": "毒性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33602:耐力打击并使其移动速度降低50",
+    "skill_id": "33602",
+    "label": "耐力打击并使其移动速度降低50",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33602:毒性伤害#2",
+    "skill_id": "33602",
+    "label": "毒性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "33602:毒性伤害#3",
+    "skill_id": "33602",
+    "label": "毒性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35129:消耗-耐力",
+    "skill_id": "35129",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35129:外功伤害和",
+    "skill_id": "35129",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35129:外功伤害",
+    "skill_id": "35129",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35130:消耗-精神提高自身外功攻击力",
+    "skill_id": "35130",
+    "label": "消耗-精神提高自身外功攻击力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35131:消耗-耐力",
+    "skill_id": "35131",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35131:外功伤害和",
+    "skill_id": "35131",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35131:外功伤害",
+    "skill_id": "35131",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35131:耐力打击",
+    "skill_id": "35131",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35131:外功伤害#2",
+    "skill_id": "35131",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35131:外功伤害#3",
+    "skill_id": "35131",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35132:气血值和",
+    "skill_id": "35132",
+    "label": "气血值和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35132:耐力",
+    "skill_id": "35132",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35132:阴性内功的护盾",
+    "skill_id": "35132",
+    "label": "阴性内功的护盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35132:精神值",
+    "skill_id": "35132",
+    "label": "精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35133:消耗-精神对目标造成",
+    "skill_id": "35133",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35133:外功伤害和",
+    "skill_id": "35133",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35133:精神打击",
+    "skill_id": "35133",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35133:外功伤害",
+    "skill_id": "35133",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35134:消耗-精神",
+    "skill_id": "35134",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35134:阳性伤害和",
+    "skill_id": "35134",
+    "label": "阳性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35134:耐力打击",
+    "skill_id": "35134",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35134:耐力与",
+    "skill_id": "35134",
+    "label": "耐力与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35134:精神",
+    "skill_id": "35134",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35134:阳性伤害",
+    "skill_id": "35134",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:消耗-耐力与道具",
+    "skill_id": "35135",
+    "label": "消耗-耐力与道具",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:外功伤害和",
+    "skill_id": "35135",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:精神打击",
+    "skill_id": "35135",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:外功伤害与",
+    "skill_id": "35135",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:耐力打击",
+    "skill_id": "35135",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:外功伤害",
+    "skill_id": "35135",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:外功伤害#2",
+    "skill_id": "35135",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:外功伤害#3",
+    "skill_id": "35135",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35135:外功伤害#4",
+    "skill_id": "35135",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:消耗-精神对目标造成",
+    "skill_id": "35136",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:伤害与",
+    "skill_id": "35136",
+    "label": "伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:耐力打击和",
+    "skill_id": "35136",
+    "label": "耐力打击和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:精神打击",
+    "skill_id": "35136",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:外功伤害",
+    "skill_id": "35136",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:外功伤害与精神打击",
+    "skill_id": "35136",
+    "label": "外功伤害与精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:外功伤害并使其眩晕五秒",
+    "skill_id": "35136",
+    "label": "外功伤害并使其眩晕五秒",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:伤害",
+    "skill_id": "35136",
+    "label": "伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:外功伤害#2",
+    "skill_id": "35136",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:外功伤害#3",
+    "skill_id": "35136",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35136:外功伤害#4",
+    "skill_id": "35136",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35137:消耗-精神对目标造成",
+    "skill_id": "35137",
+    "label": "消耗-精神对目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35137:阴性内功伤害与",
+    "skill_id": "35137",
+    "label": "阴性内功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35137:耐力打击",
+    "skill_id": "35137",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35137:阴性内功伤害",
+    "skill_id": "35137",
+    "label": "阴性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35138:消耗-耐力",
+    "skill_id": "35138",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35138:外功伤害与",
+    "skill_id": "35138",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35138:耐力打击",
+    "skill_id": "35138",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35138:会心值",
+    "skill_id": "35138",
+    "label": "会心值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35138:消耗-精神",
+    "skill_id": "35138",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35138:外功伤害",
+    "skill_id": "35138",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35139:外功防御",
+    "skill_id": "35139",
+    "label": "外功防御",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35139:精神",
+    "skill_id": "35139",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:消耗-精神",
+    "skill_id": "35140",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:消耗-精神值",
+    "skill_id": "35140",
+    "label": "消耗-精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:外功伤害和",
+    "skill_id": "35140",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:精神打击",
+    "skill_id": "35140",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:外功伤害",
+    "skill_id": "35140",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:耐力值",
+    "skill_id": "35140",
+    "label": "耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:阴性伤害",
+    "skill_id": "35140",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:外功伤害#2",
+    "skill_id": "35140",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:外功伤害#3",
+    "skill_id": "35140",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "35140:阴性伤害#2",
+    "skill_id": "35140",
+    "label": "阴性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30619:消耗-精神",
+    "skill_id": "30619",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30619:外功伤害和",
+    "skill_id": "30619",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30619:精神打击",
+    "skill_id": "30619",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "30619:外功伤害",
+    "skill_id": "30619",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36712:消耗-精神与",
+    "skill_id": "36712",
+    "label": "消耗-精神与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36712:耐力",
+    "skill_id": "36712",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36712:攻击",
+    "skill_id": "36712",
+    "label": "攻击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36712:精神或耐力",
+    "skill_id": "36712",
+    "label": "精神或耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36713:消耗-耐力",
+    "skill_id": "36713",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36713:阳性内功伤害与",
+    "skill_id": "36713",
+    "label": "阳性内功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36713:精神打击",
+    "skill_id": "36713",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36713:阳性内功伤害",
+    "skill_id": "36713",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36714:消耗-精神",
+    "skill_id": "36714",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36714:毒性伤害",
+    "skill_id": "36714",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36714:毒性伤害#2",
+    "skill_id": "36714",
+    "label": "毒性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36714:毒性伤害#3",
+    "skill_id": "36714",
+    "label": "毒性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36714:毒性伤害#4",
+    "skill_id": "36714",
+    "label": "毒性伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36714:毒性伤害#5",
+    "skill_id": "36714",
+    "label": "毒性伤害#5",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36714:毒性伤害#6",
+    "skill_id": "36714",
+    "label": "毒性伤害#6",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36715:消耗-精神",
+    "skill_id": "36715",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36715:毒性伤害与",
+    "skill_id": "36715",
+    "label": "毒性伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36715:耐力打击",
+    "skill_id": "36715",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36715:毒性伤害",
+    "skill_id": "36715",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36715:毒性伤害#2",
+    "skill_id": "36715",
+    "label": "毒性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36715:毒性伤害#3",
+    "skill_id": "36715",
+    "label": "毒性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:消耗-精神",
+    "skill_id": "36716",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:毒性伤害与",
+    "skill_id": "36716",
+    "label": "毒性伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:精神打击",
+    "skill_id": "36716",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:毒性伤害",
+    "skill_id": "36716",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:毒性内功伤害并添加",
+    "skill_id": "36716",
+    "label": "毒性内功伤害并添加",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:精神打击#2",
+    "skill_id": "36716",
+    "label": "精神打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:毒性伤害#2",
+    "skill_id": "36716",
+    "label": "毒性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:毒性伤害#3",
+    "skill_id": "36716",
+    "label": "毒性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "36716:毒性内功伤害",
+    "skill_id": "36716",
+    "label": "毒性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37672:消耗-精神",
+    "skill_id": "37672",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37672:外功伤害与",
+    "skill_id": "37672",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37672:耐力打击",
+    "skill_id": "37672",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37672:外功伤害",
+    "skill_id": "37672",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37673:消耗-精神",
+    "skill_id": "37673",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37673:外功伤害与",
+    "skill_id": "37673",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37673:耐力打击",
+    "skill_id": "37673",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37673:外功伤害",
+    "skill_id": "37673",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37673:外功伤害#2",
+    "skill_id": "37673",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37673:外功伤害#3",
+    "skill_id": "37673",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37674:外功伤害吸收盾与",
+    "skill_id": "37674",
+    "label": "外功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37674:耐力打击吸收盾",
+    "skill_id": "37674",
+    "label": "耐力打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37674:消耗-精神",
+    "skill_id": "37674",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37674:精神值并使自身获得5层",
+    "skill_id": "37674",
+    "label": "精神值并使自身获得5层",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37674:外功伤害",
+    "skill_id": "37674",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:外功伤害吸收盾与",
+    "skill_id": "37675",
+    "label": "外功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:耐力打击吸收盾",
+    "skill_id": "37675",
+    "label": "耐力打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:消耗-精神",
+    "skill_id": "37675",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:外功伤害与",
+    "skill_id": "37675",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:耐力打击",
+    "skill_id": "37675",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:反击伤害并减少目标",
+    "skill_id": "37675",
+    "label": "反击伤害并减少目标",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:外功伤害",
+    "skill_id": "37675",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:外功伤害#2",
+    "skill_id": "37675",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "37675:反击伤害",
+    "skill_id": "37675",
+    "label": "反击伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39204:消耗-耐力对前方45度15尺范围内造成",
+    "skill_id": "39204",
+    "label": "消耗-耐力对前方45度15尺范围内造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39204:阳性内功伤害和",
+    "skill_id": "39204",
+    "label": "阳性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39204:精神打击",
+    "skill_id": "39204",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39204:阳性内功伤害",
+    "skill_id": "39204",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:消耗-精神对自身周围10尺目标造成",
+    "skill_id": "39215",
+    "label": "消耗-精神对自身周围10尺目标造成",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:阳性伤害和",
+    "skill_id": "39215",
+    "label": "阳性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:耐力打击",
+    "skill_id": "39215",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:阳性伤害",
+    "skill_id": "39215",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:阴性伤害和",
+    "skill_id": "39215",
+    "label": "阴性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:精神打击",
+    "skill_id": "39215",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:阳性伤害#2",
+    "skill_id": "39215",
+    "label": "阳性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:阳性伤害#3",
+    "skill_id": "39215",
+    "label": "阳性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39215:阴性伤害",
+    "skill_id": "39215",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39254:消耗-精神前方发射20尺扇形飞针",
+    "skill_id": "39254",
+    "label": "消耗-精神前方发射20尺扇形飞针",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39254:外功伤害与",
+    "skill_id": "39254",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39254:耐力打击",
+    "skill_id": "39254",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39254:外功伤害",
+    "skill_id": "39254",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39258:消耗-精神对面前180度12尺内最多6名敌人造成总计",
+    "skill_id": "39258",
+    "label": "消耗-精神对面前180度12尺内最多6名敌人造成总计",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39258:外功伤害和总计",
+    "skill_id": "39258",
+    "label": "外功伤害和总计",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39258:耐力打击",
+    "skill_id": "39258",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39258:外功伤害",
+    "skill_id": "39258",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:消耗-精神与",
+    "skill_id": "39291",
+    "label": "消耗-精神与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:耐力",
+    "skill_id": "39291",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:外功伤害吸收护盾与",
+    "skill_id": "39291",
+    "label": "外功伤害吸收护盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:耐力打击吸收盾",
+    "skill_id": "39291",
+    "label": "耐力打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:外功伤害和",
+    "skill_id": "39291",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:精神打击",
+    "skill_id": "39291",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:外功伤害",
+    "skill_id": "39291",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:外功伤害#2",
+    "skill_id": "39291",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:外功伤害#3",
+    "skill_id": "39291",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39291:外功伤害#4",
+    "skill_id": "39291",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:消耗-耐力",
+    "skill_id": "39292",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:外功伤害吸收盾与",
+    "skill_id": "39292",
+    "label": "外功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:耐力打击吸收盾",
+    "skill_id": "39292",
+    "label": "耐力打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:外功伤害和",
+    "skill_id": "39292",
+    "label": "外功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:精神打击",
+    "skill_id": "39292",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:外功伤害",
+    "skill_id": "39292",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:外功伤害#2",
+    "skill_id": "39292",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:外功伤害#3",
+    "skill_id": "39292",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39292:外功伤害#4",
+    "skill_id": "39292",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39293:消耗-精神",
+    "skill_id": "39293",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39293:内功伤害吸收盾与",
+    "skill_id": "39293",
+    "label": "内功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39293:精神打击吸收盾",
+    "skill_id": "39293",
+    "label": "精神打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39293:气血值和",
+    "skill_id": "39293",
+    "label": "气血值和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39293:耐力值",
+    "skill_id": "39293",
+    "label": "耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39293:内功伤害",
+    "skill_id": "39293",
+    "label": "内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39294:外功伤害吸收盾与",
+    "skill_id": "39294",
+    "label": "外功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39294:耐力打击吸收盾",
+    "skill_id": "39294",
+    "label": "耐力打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39294:消耗-耐力来维持格挡状态",
+    "skill_id": "39294",
+    "label": "消耗-耐力来维持格挡状态",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39294:外功伤害",
+    "skill_id": "39294",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39294:外功伤害#2",
+    "skill_id": "39294",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39294:外功伤害#3",
+    "skill_id": "39294",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39294:外功伤害#4",
+    "skill_id": "39294",
+    "label": "外功伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39294:外功伤害#5",
+    "skill_id": "39294",
+    "label": "外功伤害#5",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39295:内功伤害吸收盾与",
+    "skill_id": "39295",
+    "label": "内功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39295:精神打击吸收盾",
+    "skill_id": "39295",
+    "label": "精神打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39295:消耗-精神来维持格挡状态",
+    "skill_id": "39295",
+    "label": "消耗-精神来维持格挡状态",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39295:对应内功伤害",
+    "skill_id": "39295",
+    "label": "对应内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39295:内功伤害",
+    "skill_id": "39295",
+    "label": "内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39295:对应内功伤害#2",
+    "skill_id": "39295",
+    "label": "对应内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39296:消耗-耐力使自身获得",
+    "skill_id": "39296",
+    "label": "消耗-耐力使自身获得",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39296:内功伤害吸收盾与",
+    "skill_id": "39296",
+    "label": "内功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39296:精神打击吸收盾",
+    "skill_id": "39296",
+    "label": "精神打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39296:外功伤害并击倒3秒",
+    "skill_id": "39296",
+    "label": "外功伤害并击倒3秒",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39296:气血值与",
+    "skill_id": "39296",
+    "label": "气血值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39296:精神值",
+    "skill_id": "39296",
+    "label": "精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39296:内功伤害",
+    "skill_id": "39296",
+    "label": "内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39296:外功伤害",
+    "skill_id": "39296",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39297:消耗-耐力",
+    "skill_id": "39297",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39297:外功伤害吸收盾和",
+    "skill_id": "39297",
+    "label": "外功伤害吸收盾和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39297:耐力打击吸收盾或",
+    "skill_id": "39297",
+    "label": "耐力打击吸收盾或",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39297:内功伤害吸收盾和",
+    "skill_id": "39297",
+    "label": "内功伤害吸收盾和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39297:精神打击吸收盾",
+    "skill_id": "39297",
+    "label": "精神打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39297:外功伤害",
+    "skill_id": "39297",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39297:内功伤害",
+    "skill_id": "39297",
+    "label": "内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39298:消耗-耐力获得",
+    "skill_id": "39298",
+    "label": "消耗-耐力获得",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39298:外功伤害吸收盾与",
+    "skill_id": "39298",
+    "label": "外功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39298:耐力打击吸收盾",
+    "skill_id": "39298",
+    "label": "耐力打击吸收盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39298:外功伤害",
+    "skill_id": "39298",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39303:消耗-耐力",
+    "skill_id": "39303",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39303:气血值与",
+    "skill_id": "39303",
+    "label": "气血值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39303:精神值",
+    "skill_id": "39303",
+    "label": "精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39303:气血值与#2",
+    "skill_id": "39303",
+    "label": "气血值与#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39303:精神值#2",
+    "skill_id": "39303",
+    "label": "精神值#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39303:气血值与#3",
+    "skill_id": "39303",
+    "label": "气血值与#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39303:精神值#3",
+    "skill_id": "39303",
+    "label": "精神值#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39303:耐力值",
+    "skill_id": "39303",
+    "label": "耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39304:消耗-耐力值",
+    "skill_id": "39304",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39305:消耗-耐力值",
+    "skill_id": "39305",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39305:阴性伤害和",
+    "skill_id": "39305",
+    "label": "阴性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39305:精神打击",
+    "skill_id": "39305",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39305:阴性伤害",
+    "skill_id": "39305",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39305:阴性伤害#2",
+    "skill_id": "39305",
+    "label": "阴性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39305:阴性伤害#3",
+    "skill_id": "39305",
+    "label": "阴性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39306:消耗-精神",
+    "skill_id": "39306",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39306:阳性伤害与",
+    "skill_id": "39306",
+    "label": "阳性伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39306:耐力打击",
+    "skill_id": "39306",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39306:阳性伤害",
+    "skill_id": "39306",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39307:消耗-精神",
+    "skill_id": "39307",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39307:阴性伤害与",
+    "skill_id": "39307",
+    "label": "阴性伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39307:耐力打击",
+    "skill_id": "39307",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39307:阴性伤害",
+    "skill_id": "39307",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39308:消耗-精神",
+    "skill_id": "39308",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39308:阳性内功伤害",
+    "skill_id": "39308",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39308:阳性内功伤害#2",
+    "skill_id": "39308",
+    "label": "阳性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39309:消耗-精神值与",
+    "skill_id": "39309",
+    "label": "消耗-精神值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39309:耐力值",
+    "skill_id": "39309",
+    "label": "耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39309:气血值和",
+    "skill_id": "39309",
+    "label": "气血值和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39309:精神值与",
+    "skill_id": "39309",
+    "label": "精神值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39309:耐力值#2",
+    "skill_id": "39309",
+    "label": "耐力值#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39310:消耗-精神值",
+    "skill_id": "39310",
+    "label": "消耗-精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39310:外功伤害与",
+    "skill_id": "39310",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39310:耐力打击",
+    "skill_id": "39310",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39310:外功伤害",
+    "skill_id": "39310",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39310:外功伤害#2",
+    "skill_id": "39310",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39310:外功伤害#3",
+    "skill_id": "39310",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39311:消耗-耐力",
+    "skill_id": "39311",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39311:阴性功伤害与",
+    "skill_id": "39311",
+    "label": "阴性功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39311:精神打击",
+    "skill_id": "39311",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39311:阴性伤害与",
+    "skill_id": "39311",
+    "label": "阴性伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39311:精神伤害",
+    "skill_id": "39311",
+    "label": "精神伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39311:阴性功伤害",
+    "skill_id": "39311",
+    "label": "阴性功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39311:阴性伤害",
+    "skill_id": "39311",
+    "label": "阴性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39311:精神伤害#2",
+    "skill_id": "39311",
+    "label": "精神伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39299:消耗-耐力",
+    "skill_id": "39299",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39299:阳性内功伤害和",
+    "skill_id": "39299",
+    "label": "阳性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39299:精神打击效果",
+    "skill_id": "39299",
+    "label": "精神打击效果",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39299:阳性内功伤害",
+    "skill_id": "39299",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:消耗-耐力",
+    "skill_id": "39300",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:阳性内功伤害与",
+    "skill_id": "39300",
+    "label": "阳性内功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:精神打击",
+    "skill_id": "39300",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:阳性伤害与",
+    "skill_id": "39300",
+    "label": "阳性伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:精神打击#2",
+    "skill_id": "39300",
+    "label": "精神打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:阳性伤害与#2",
+    "skill_id": "39300",
+    "label": "阳性伤害与#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:精神打击#3",
+    "skill_id": "39300",
+    "label": "精神打击#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:阳性内功伤害",
+    "skill_id": "39300",
+    "label": "阳性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:阳性伤害",
+    "skill_id": "39300",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39300:阳性伤害#2",
+    "skill_id": "39300",
+    "label": "阳性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:消耗-精神",
+    "skill_id": "39301",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:外功伤害与",
+    "skill_id": "39301",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:耐力打击",
+    "skill_id": "39301",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:外功伤害与#2",
+    "skill_id": "39301",
+    "label": "外功伤害与#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:耐力打击#2",
+    "skill_id": "39301",
+    "label": "耐力打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:外功伤害与#3",
+    "skill_id": "39301",
+    "label": "外功伤害与#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:耐力打击#3",
+    "skill_id": "39301",
+    "label": "耐力打击#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:外功伤害",
+    "skill_id": "39301",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:外功伤害#2",
+    "skill_id": "39301",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39301:外功伤害#3",
+    "skill_id": "39301",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39302:消耗-精神和",
+    "skill_id": "39302",
+    "label": "消耗-精神和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "39302:耐力",
+    "skill_id": "39302",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41013:消耗-精神值",
+    "skill_id": "41013",
+    "label": "消耗-精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41013:耐力打击与",
+    "skill_id": "41013",
+    "label": "耐力打击与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41013:阴性内功伤害",
+    "skill_id": "41013",
+    "label": "阴性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41013:阴性内功伤害#2",
+    "skill_id": "41013",
+    "label": "阴性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41014:消耗-耐力值",
+    "skill_id": "41014",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41014:气血和",
+    "skill_id": "41014",
+    "label": "气血和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41014:精神值并驱散目标内功破绽",
+    "skill_id": "41014",
+    "label": "精神值并驱散目标内功破绽",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41014:耐力值的效果",
+    "skill_id": "41014",
+    "label": "耐力值的效果",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41015:消耗-耐力值",
+    "skill_id": "41015",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41015:精神护盾和",
+    "skill_id": "41015",
+    "label": "精神护盾和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41015:内功护盾",
+    "skill_id": "41015",
+    "label": "内功护盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41015:气血和",
+    "skill_id": "41015",
+    "label": "气血和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41015:精神值",
+    "skill_id": "41015",
+    "label": "精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41016:消耗-耐力值",
+    "skill_id": "41016",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41016:阴性内功伤害",
+    "skill_id": "41016",
+    "label": "阴性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41016:精神值",
+    "skill_id": "41016",
+    "label": "精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41016:精神伤害",
+    "skill_id": "41016",
+    "label": "精神伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41016:耐力值",
+    "skill_id": "41016",
+    "label": "耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41016:阴性内功伤害#2",
+    "skill_id": "41016",
+    "label": "阴性内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41016:精神伤害#2",
+    "skill_id": "41016",
+    "label": "精神伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41017:消耗-耐力值",
+    "skill_id": "41017",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41017:外功伤害并附带5秒眩晕",
+    "skill_id": "41017",
+    "label": "外功伤害并附带5秒眩晕",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41017:外功伤害",
+    "skill_id": "41017",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41018:消耗-耐力值",
+    "skill_id": "41018",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41018:混元内功伤害与",
+    "skill_id": "41018",
+    "label": "混元内功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41018:精神打击",
+    "skill_id": "41018",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41018:混元内功伤害",
+    "skill_id": "41018",
+    "label": "混元内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41018:混元内功伤害#2",
+    "skill_id": "41018",
+    "label": "混元内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41018:混元内功伤害#3",
+    "skill_id": "41018",
+    "label": "混元内功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41019:消耗-耐力值",
+    "skill_id": "41019",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41019:外功伤害与",
+    "skill_id": "41019",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41019:耐力打击",
+    "skill_id": "41019",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41019:外功伤害",
+    "skill_id": "41019",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41020:消耗-耐力值",
+    "skill_id": "41020",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41020:混元伤害",
+    "skill_id": "41020",
+    "label": "混元伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41020:外功伤害与",
+    "skill_id": "41020",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41020:耐力打击",
+    "skill_id": "41020",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41020:混元伤害#2",
+    "skill_id": "41020",
+    "label": "混元伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41020:外功伤害",
+    "skill_id": "41020",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41021:消耗-耐力值",
+    "skill_id": "41021",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41021:外功伤害与",
+    "skill_id": "41021",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41021:精神打击",
+    "skill_id": "41021",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41021:外功伤害与#2",
+    "skill_id": "41021",
+    "label": "外功伤害与#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41021:精神打击#2",
+    "skill_id": "41021",
+    "label": "精神打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41021:外功伤害",
+    "skill_id": "41021",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41021:外功伤害#2",
+    "skill_id": "41021",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41022:消耗-耐力值",
+    "skill_id": "41022",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41022:外功伤害与",
+    "skill_id": "41022",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41022:精神打击",
+    "skill_id": "41022",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41022:外功伤害",
+    "skill_id": "41022",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41022:外功伤害#2",
+    "skill_id": "41022",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41022:外功伤害#3",
+    "skill_id": "41022",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41023:消耗-耐力值",
+    "skill_id": "41023",
+    "label": "消耗-耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41023:内功伤害吸收盾与",
+    "skill_id": "41023",
+    "label": "内功伤害吸收盾与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41023:精神打击吸收护盾",
+    "skill_id": "41023",
+    "label": "精神打击吸收护盾",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41023:内功伤害吸收盾并降低仇恨",
+    "skill_id": "41023",
+    "label": "内功伤害吸收盾并降低仇恨",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41023:耐力值",
+    "skill_id": "41023",
+    "label": "耐力值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41023:内功伤害",
+    "skill_id": "41023",
+    "label": "内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41023:内功伤害#2",
+    "skill_id": "41023",
+    "label": "内功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41024:消耗-精神值",
+    "skill_id": "41024",
+    "label": "消耗-精神值",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41024:外功伤害与",
+    "skill_id": "41024",
+    "label": "外功伤害与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41024:耐力打击",
+    "skill_id": "41024",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41024:外功伤害与#2",
+    "skill_id": "41024",
+    "label": "外功伤害与#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41024:耐力打击#2",
+    "skill_id": "41024",
+    "label": "耐力打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41024:外功伤害",
+    "skill_id": "41024",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "41024:外功伤害#2",
+    "skill_id": "41024",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43655:消耗-耐力",
+    "skill_id": "43655",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43655:外功伤害并附带",
+    "skill_id": "43655",
+    "label": "外功伤害并附带",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43655:精神打击",
+    "skill_id": "43655",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43655:外功伤害",
+    "skill_id": "43655",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43655:外功伤害#2",
+    "skill_id": "43655",
+    "label": "外功伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43655:外功伤害#3",
+    "skill_id": "43655",
+    "label": "外功伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:消耗-精神",
+    "skill_id": "43656",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:毒性伤害并附带",
+    "skill_id": "43656",
+    "label": "毒性伤害并附带",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:耐力打击",
+    "skill_id": "43656",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:毒性伤害和",
+    "skill_id": "43656",
+    "label": "毒性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:耐力打击#2",
+    "skill_id": "43656",
+    "label": "耐力打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:毒性伤害",
+    "skill_id": "43656",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:毒性伤害#2",
+    "skill_id": "43656",
+    "label": "毒性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:毒性伤害#3",
+    "skill_id": "43656",
+    "label": "毒性伤害#3",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43656:毒性伤害#4",
+    "skill_id": "43656",
+    "label": "毒性伤害#4",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43657:消耗-精神",
+    "skill_id": "43657",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43657:毒性伤害并附带",
+    "skill_id": "43657",
+    "label": "毒性伤害并附带",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43657:耐力打击",
+    "skill_id": "43657",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43657:精神打击",
+    "skill_id": "43657",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43657:毒性伤害和",
+    "skill_id": "43657",
+    "label": "毒性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43657:耐力打击#2",
+    "skill_id": "43657",
+    "label": "耐力打击#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43657:毒性伤害",
+    "skill_id": "43657",
+    "label": "毒性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43657:毒性伤害#2",
+    "skill_id": "43657",
+    "label": "毒性伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43658:消耗-耐力",
+    "skill_id": "43658",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43658:阳性伤害和",
+    "skill_id": "43658",
+    "label": "阳性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43658:精神伤害",
+    "skill_id": "43658",
+    "label": "精神伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43658:阳性伤害",
+    "skill_id": "43658",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43658:精神伤害#2",
+    "skill_id": "43658",
+    "label": "精神伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43659:消耗-精神与",
+    "skill_id": "43659",
+    "label": "消耗-精神与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43659:耐力",
+    "skill_id": "43659",
+    "label": "耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43659:消耗-目标当前精神比例与耐力比例中较高的一项",
+    "skill_id": "43659",
+    "label": "消耗-目标当前精神比例与耐力比例中较高的一项",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43660:消耗-耐力",
+    "skill_id": "43660",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43660:生命值与",
+    "skill_id": "43660",
+    "label": "生命值与",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43660:精神",
+    "skill_id": "43660",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43660:固定值的阳性百战伤害",
+    "skill_id": "43660",
+    "label": "固定值的阳性百战伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43660:固定值的阳性百战伤害#2",
+    "skill_id": "43660",
+    "label": "固定值的阳性百战伤害#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43661:消耗-精神",
+    "skill_id": "43661",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43661:伤害和",
+    "skill_id": "43661",
+    "label": "伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43661:耐力打击",
+    "skill_id": "43661",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43661:伤害",
+    "skill_id": "43661",
+    "label": "伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43662:消耗-精神",
+    "skill_id": "43662",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43662:阳性伤害和",
+    "skill_id": "43662",
+    "label": "阳性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43662:耐力打击",
+    "skill_id": "43662",
+    "label": "耐力打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43662:阳性伤害",
+    "skill_id": "43662",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43663:消耗-耐力",
+    "skill_id": "43663",
+    "label": "消耗-耐力",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43663:阳性伤害和",
+    "skill_id": "43663",
+    "label": "阳性伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43663:精神打击",
+    "skill_id": "43663",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43663:精神",
+    "skill_id": "43663",
+    "label": "精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "43663:阳性伤害",
+    "skill_id": "43663",
+    "label": "阳性伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "28044:消耗-精神",
+    "skill_id": "28044",
+    "label": "消耗-精神",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "28044:阴性内功伤害和",
+    "skill_id": "28044",
+    "label": "阴性内功伤害和",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "28044:精神打击",
+    "skill_id": "28044",
+    "label": "精神打击",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "28044:消耗-精神#2",
+    "skill_id": "28044",
+    "label": "消耗-精神#2",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "28044:阴性内功伤害",
+    "skill_id": "28044",
+    "label": "阴性内功伤害",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32337:外功伤害并使其眩晕3秒",
+    "skill_id": "32337",
+    "label": "外功伤害并使其眩晕3秒",
+    "units": "点",
+    "meta": {}
+  },
+  {
+    "series_id": "32337:外功伤害",
+    "skill_id": "32337",
+    "label": "外功伤害",
+    "units": "点",
+    "meta": {}
+  }
+]

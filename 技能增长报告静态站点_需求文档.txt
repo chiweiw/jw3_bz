@@ -1,0 +1,114 @@
+项目名称
+- 技能数据增长报告静态站点
+
+项目背景
+- 现有技能原文（包含技能名、编号及多个数值序列）需结构化分析与可视化展示
+- 希望通过纯静态网页展示数据，保证更新便捷、展示美观，不涉及权限与登录
+
+目标与范围
+- 目标：解析原文为结构化数据，进行增长分析，落库到SQLite；导出JSON；生成两类静态页面
+- 范围：文本解析与清洗、指标分析（线性/趋势/跃迁）、SQLite入库与JSON导出、静态页面（基础信息页与图表页）
+- 非目标：不构建后端Web服务；不接入复杂前端框架；不做权限控制
+
+用户角色与场景
+- 数据分析者：查看技能关键指标与增长特性，筛选/排序/定位异常
+- 策划/业务：快速检索技能，查看精神/耐力打击与伤害趋势
+- 技术人员：执行构建流程，发布站点与数据更新
+
+功能需求
+- 数据采集与解析
+- 读取源文本（初期可沿用本地txt，路径可配置）
+- 识别技能块（模式：技能名-技能ID），抽取数值序列（“<…>点XXX”与“<…>XXX伤害”）
+- 归一化标签（消耗-精神/耐力、精神打击、耐力打击、外功/内功/混元/毒性/阳性伤害、恢复等）
+- 数据清洗（统一单位为“点”、转换为float、记录缺失与异常）
+- 指标分析
+- 计算相邻差值、线性判定（差值恒定为线性）
+- 趋势识别（increasing/decreasing/mixed）
+- 跃迁点识别（相邻差值异常增大，阈值可配置）
+- 数据入库（SQLite）
+- 建立skills、series、values、analysis四表，幂等写入与索引优化
+- skills：skill_id、name、source_span、时间戳
+- series：series_id、skill_id、label、units、meta
+- values：id、series_id、level_index、value、diff_to_prev、is_jump
+- analysis：series_id、is_linear、trend、min、max、count、jump_points
+- 数据导出（JSON）
+- 导出skills.json、series.json、values.json、analysis.json，结构适配前端渲染
+- 支持按技能拆分JSON，便于图表页按需加载
+- 基础信息页（index.html）
+- 筛选：技能名称/ID、序列类型（消耗/伤害/打击/恢复）
+- 表格：展示关键序列的值区间（min-max）、线性判定、趋势、跃迁点数量
+- 展开：查看1..13级的值与差值列表；支持排序（跃迁数量/最大值/线性优先）
+- 图表页（charts.html）
+- 选择技能与序列（可多选）
+- 折线图：级次为X轴、值为Y轴；支持切换差值曲线
+- 高亮：线性序列标注；非线性序列在跃迁点添加标记
+- 工具：导出图像、缩放、工具提示
+- 页面交互与体验
+- 轻量搜索与过滤，不依赖厚重前端框架
+- 友好提示：数据为空/解析异常/加载失败
+- 本地离线可用（无需服务器与权限）
+
+数据模型（SQLite）
+- skills(skill_id, name, source_span, created_at, updated_at)
+- series(series_id, skill_id, label, units, meta)
+- values(id, series_id, level_index, value, diff_to_prev, is_jump)
+- analysis(series_id, is_linear, trend, min, max, count, jump_points)
+
+JSON导出结构
+- data/skills.json：技能列表（skill_id、name）
+- data/series.json：序列列表（series_id、skill_id、label、units、meta）
+- data/values.json：按series_id分组的级次值（level_index、value、diff_to_prev、is_jump）
+- data/analysis.json：每序列的分析结果（is_linear、trend、min、max、count、jump_points）
+
+技术架构与选型
+- 生成层：Python 3.10+；标准库（re/json/sqlite3/pathlib）；可选pandas辅助
+- 前端层：HTML+CSS+JS；图表库使用ECharts（CDN或本地assets）
+- 站点为纯静态，不涉及权限与登录
+
+目录结构（建议）
+- 报告站点/
+- index.html（基础信息页）
+- charts.html（图表页）
+- assets/（样式、脚本、图表库）
+- data/（skills.json、series.json、values.json、analysis.json）
+
+构建与部署
+- 构建流程：解析→分析→入库SQLite→导出JSON→生成/复制静态页面与资源到站点目录
+- 部署：本地直接打开index.html；或使用任意静态服务器（可选）
+
+数据更新流程
+- 更新源文本→重跑构建流程→覆盖SQLite与JSON→页面无需改动自动显示最新数据
+
+验收标准
+- 解析覆盖：识别全部技能块与数值序列，标签归一准确
+- 分析准确：values/diff/线性/趋势/跃迁点符合定义；跃迁判定可解释
+- 页面可用：筛选/排序/展开/图表渲染与导出正常；本地离线可用
+- 一致性与性能：中等数据量下加载流畅；图表按需渲染
+
+非功能需求
+- 不涉及权限与登录；纯静态站点
+- 性能：入库/导出快速；前端加载优化，图表按需
+- 兼容性：Windows本地打开即可；中文显示正常（使用系统字体栈）
+- 可维护性：解析规则集中配置；阈值可调；目录与数据结构清晰
+- 安全：不存储敏感信息；不依赖后端
+
+风险与应对
+- 文本结构变化：解析器增加回退与异常记录；meta标记异常序列
+- CDN不可用：图表库改为本地assets
+- 中文字体：前端绘图避免后端字体问题；CSS设中文字体栈
+
+里程碑与交付
+- M1：解析器与数据模型完成；SQLite入库与导出JSON
+- M2：基础信息页完成（筛选/排序/展开）
+- M3：图表页完成（折线/差值/跃迁点标记/导出图像）
+- M4：构建脚本与更新流程完善；交付可浏览站点
+
+术语与约定
+- level_index：级次索引（1..13）；个别技能不足13级需标记缺失
+- 序列标签：消耗/减少前缀归一；伤害/打击/恢复标签统一
+- 线性判定：相邻差值恒定；非恒定则非线性
+- 跃迁判定：相邻差值较前段显著增大（阈值可配置，如≥2倍）
+
+附录
+- 输入：技能原文txt（路径可配置）
+- 输出：报告站点目录（index.html、charts.html、data/*.json、assets/*）

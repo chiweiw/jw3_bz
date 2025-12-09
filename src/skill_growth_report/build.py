@@ -67,6 +67,7 @@ def run(input_fp: Path, site_dir: Path, db_path: Path, jump_threshold: float) ->
 def copy_frontend(site_dir: Path) -> None:
     assets_dir = site_dir / "assets"
     ensure_dir(assets_dir)
+    (site_dir / ".nojekyll").write_text("", encoding="utf-8")
     (site_dir / "index.html").write_text(INDEX_HTML, encoding="utf-8")
     (site_dir / "charts.html").write_text(CHARTS_HTML, encoding="utf-8")
     (assets_dir / "main.js").write_text(MAIN_JS, encoding="utf-8")
@@ -326,7 +327,7 @@ input,select{padding:6px 8px}
 def main() -> None:
     p = argparse.ArgumentParser()
     p.add_argument("--input", default="1.txt")
-    p.add_argument("--site-dir", default="报告站点")
+    p.add_argument("--site-dir", default="docs")
     p.add_argument("--db-path", default="skill_report.db")
     p.add_argument("--jump-threshold", type=float, default=2.0)
     args = p.parse_args()

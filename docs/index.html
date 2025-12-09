@@ -1,0 +1,48 @@
+
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>技能数据增长报告</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="assets/main.js"></script>
+  <style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif}</style>
+  <script>window.PAGE='index'</script>
+  <script>window.DATA_BASE='data'</script>
+  <script>window.CDN_ECHARTS='https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js'</script>
+  <script>window.LOCAL_ECHARTS='assets/echarts.min.js'</script>
+  <script>(function(d,s,c,l){var e=d.createElement('script');e.src=c; e.onerror=function(){var f=d.createElement('script');f.src=l;d.head.appendChild(f)};d.head.appendChild(e)})(document,'script',window.CDN_ECHARTS,window.LOCAL_ECHARTS)</script>
+  <script>(function(){if(location.protocol==='file:'){['skills','series','values','analysis'].forEach(function(n){var s=document.createElement('script');s.src='data/'+n+'.js';document.head.appendChild(s)})}})()</script>
+  </head>
+<body>
+  <header>
+    <h1>技能数据增长报告</h1>
+    <div class="filters">
+      <input id="q" placeholder="搜索技能名称或ID" />
+      <select id="labelType">
+        <option value="">全部类型</option>
+        <option value="消耗">消耗</option>
+        <option value="伤害">伤害</option>
+        <option value="打击">打击</option>
+        <option value="恢复">恢复</option>
+      </select>
+      <select id="sortBy">
+        <option value="">默认排序</option>
+        <option value="jumps">跃迁数量</option>
+        <option value="max">最大值</option>
+        <option value="linear">线性优先</option>
+      </select>
+    </div>
+  </header>
+  <main>
+    <table id="seriesTable">
+      <thead>
+        <tr><th>技能</th><th>序列</th><th>区间</th><th>线性</th><th>趋势</th><th>跃迁</th><th></th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div id="details"></div>
+  </main>
+</body>
+</html>

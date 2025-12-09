@@ -2,7 +2,7 @@ import argparse
 import json
 import sqlite3
 from pathlib import Path
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Optional
 
 from .parser import find_skills, extract_sequences
 from .analyzer import analyze, diffs
@@ -21,7 +21,7 @@ def unique_label(existing: Dict[str, Any], label: str) -> str:
         i += 1
 
 
-def run(input_fp: Path, site_dir: Path, db_path: Path, jump_threshold: float) -> None:
+def run(input_fp: Path, site_dir: Path, db_path: Path, jump_threshold: float, cname: Optional[str] = None) -> None:
     text = input_fp.read_text(encoding="utf-8")
     skills_blocks = find_skills(text)
     ensure_dir(site_dir)
@@ -61,13 +61,15 @@ def run(input_fp: Path, site_dir: Path, db_path: Path, jump_threshold: float) ->
     conn.commit()
     conn.close()
     export_all(site_dir, skills_out, series_out, values_out, analyses_out)
-    copy_frontend(site_dir)
+    copy_frontend(site_dir, cname)
 
 
-def copy_frontend(site_dir: Path) -> None:
+def copy_frontend(site_dir: Path, cname: Optional[str]) -> None:
     assets_dir = site_dir / "assets"
     ensure_dir(assets_dir)
     (site_dir / ".nojekyll").write_text("", encoding="utf-8")
+    if cname:
+        (site_dir / "CNAME").write_text(cname.strip(), encoding="utf-8")
     (site_dir / "index.html").write_text(INDEX_HTML_VUE, encoding="utf-8")
     (site_dir / "charts.html").write_text(CHARTS_HTML, encoding="utf-8")
     (assets_dir / "main.js").write_text(MAIN_JS, encoding="utf-8")
@@ -451,8 +453,9 @@ def main() -> None:
     p.add_argument("--site-dir", default="docs")
     p.add_argument("--db-path", default="skill_report.db")
     p.add_argument("--jump-threshold", type=float, default=2.0)
+    p.add_argument("--cname", default=None)
     args = p.parse_args()
-    run(Path(args.input), Path(args.site_dir), Path(args.db_path), args.jump_threshold)
+    run(Path(args.input), Path(args.site_dir), Path(args.db_path), args.jump_threshold, args.cname)
 
 
 if __name__ == "__main__":

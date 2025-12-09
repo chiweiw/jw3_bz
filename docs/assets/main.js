@@ -1,4 +1,3 @@
-
 async function loadJson(name){
   const fromWindow = ()=>{
     if(name==='skills' && window.SKILLS) return window.SKILLS

@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -6,13 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>技能数据图表</title>
   <link rel="stylesheet" href="assets/style.css" />
-  <script defer src="assets/main.js"></script>
   <style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif}</style>
   <script>window.PAGE='charts'</script>
   <script>window.DATA_BASE='data'</script>
-  <script>window.CDN_ECHARTS='https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js'</script>
-  <script>window.LOCAL_ECHARTS='assets/echarts.min.js'</script>
-  <script>(function(d,s,c,l){var e=d.createElement('script');e.src=c; e.onerror=function(){var f=d.createElement('script');f.src=l;d.head.appendChild(f)};d.head.appendChild(e)})(document,'script',window.CDN_ECHARTS,window.LOCAL_ECHARTS)</script>
+  <script src="assets/echarts.min.js"></script>
   <script>(function(){if(location.protocol==='file:'){['skills','series','values','analysis'].forEach(function(n){var s=document.createElement('script');s.src='data/'+n+'.js';document.head.appendChild(s)})}})()</script>
   </head>
 <body>
@@ -27,5 +23,6 @@
   <main>
     <div id="chart" style="height:600px"></div>
   </main>
+  <script src="assets/main.js"></script>
 </body>
 </html>

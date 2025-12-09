@@ -1,4 +1,3 @@
-
 const { createApp, reactive, onMounted, computed } = Vue
 
 function loadJson(name){
@@ -30,29 +29,56 @@ function sortSeries(items, by){
 
 createApp({
   setup(){
-    const state = reactive({ skills:[], series:[], values:{}, analysis:{}, q:'', type:'', sort:'' , selected:null })
+    const state = reactive({ skills:[], series:[], values:{}, analysis:{}, q:'', type:'', sort:'', expanded:{} })
     const skillMap = computed(()=>Object.fromEntries(state.skills.map(s=>[s.skill_id,s.name])))
+    const skillMeta = computed(()=>Object.fromEntries(state.skills.map(s=>[s.skill_id, s.meta||{}])))
     const rows = computed(()=>{
       const items = []
+      const bySkill = {}
       for(const s of state.series){
-        const sid = s.series_id
-        const a = state.analysis[sid]||{}
-        const name = skillMap.value[s.skill_id]||''
+        (bySkill[s.skill_id] ||= []).push(s)
+      }
+      for(const sid in bySkill){
+        const name = skillMap.value[sid]||''
         const match = !state.q || sid.includes(state.q) || name.includes(state.q)
         if(!match) continue
-        if(!filterType(s.label, state.type)) continue
-        const vals = state.values[sid]||[]
-        const min = vals.length? Math.min(...vals.map(v=>v.value)) : null
-        const max = vals.length? Math.max(...vals.map(v=>v.value)) : null
-        const jumps = vals.filter(v=>v.is_jump).length
-        items.push({sid,name,label:s.label,min,max,is_linear:a.is_linear||false,trend:a.trend||'mixed',jumps})
+        const meta = skillMeta.value[sid]||{}
+        const seriesList = bySkill[sid]
+        const collect = (pred)=>{
+          const vals = []
+          for(const s of seriesList){
+            if(!pred(s)) continue
+            const vs = state.values[s.series_id]||[]
+            for(const v of vs){ vals.push(v.value) }
+          }
+          if(!vals.length) return {min:null,max:null}
+          return {min:Math.min(...vals), max:Math.max(...vals)}
+        }
+        let consume = collect(s=>s.label.startsWith('消耗-'))
+        if(meta.threefold_no_spirit_cost){ consume = {min:0, max:0} }
+        const deal = collect(s=>s.label.includes('伤害'))
+        items.push({sid, name, consume_min:consume.min, consume_max:consume.max, deal_min:deal.min, deal_max:deal.max})
       }
-      return sortSeries(items, state.sort)
+      return items
     })
-    const details = computed(()=>{
-      if(!state.selected) return []
-      return state.values[state.selected]||[]
+    const detailsMap = computed(()=>{
+      const map = {}
+      const bySkill = {}
+      for(const s of state.series){ (bySkill[s.skill_id] ||= []).push(s) }
+      for(const sid in bySkill){
+        const res = {consume:[], deal:[], other:[]}
+        for(const s of bySkill[sid]){
+          const vs = state.values[s.series_id]||[]
+          const item = {label:s.label, rows:vs}
+          if(s.label.startsWith('消耗-')) res.consume.push(item)
+          else if(s.label.includes('伤害')) res.deal.push(item)
+          else res.other.push(item)
+        }
+        map[sid] = res
+      }
+      return map
     })
+    const toggle = (sid)=>{ state.expanded[sid] = !state.expanded[sid] }
     onMounted(async ()=>{
       const [skills, series, values, analysis] = await Promise.all([
         loadJson('skills'), loadJson('series'), loadJson('values'), loadJson('analysis')
@@ -62,57 +88,88 @@ createApp({
       state.values = values
       state.analysis = analysis
     })
-    return { state, rows, details }
+    return { state, rows, detailsMap, toggle }
   },
   template: `
     <section>
       <div class='filters'>
         <input v-model.trim="state.q" placeholder="搜索技能名称或ID" />
-        <select v-model="state.type">
-          <option value="">全部类型</option>
-          <option value="消耗">消耗</option>
-          <option value="伤害">伤害</option>
-          <option value="打击">打击</option>
-          <option value="恢复">恢复</option>
-        </select>
-        <select v-model="state.sort">
-          <option value="">默认排序</option>
-          <option value="jumps">跃迁数量</option>
-          <option value="max">最大值</option>
-          <option value="linear">线性优先</option>
-        </select>
       </div>
       <table>
         <thead>
-          <tr><th>技能</th><th>序列</th><th>区间</th><th>线性</th><th>趋势</th><th>跃迁</th><th></th></tr>
+          <tr><th>技能</th><th>消耗区间</th><th>造成区间</th><th></th></tr>
         </thead>
         <tbody>
-          <tr v-for="it in rows" :key="it.sid">
-            <td>{{ it.name }} ({{ it.sid.split(':')[0] }})</td>
-            <td>{{ it.label }}</td>
-            <td>{{ (it.min==null||it.max==null)? '-' : (it.min + ' - ' + it.max) }}</td>
-            <td>{{ it.is_linear ? '是' : '否' }}</td>
-            <td>{{ it.trend }}</td>
-            <td>{{ String(it.jumps) }}</td>
-            <td><button @click="state.selected = it.sid">展开</button></td>
-          </tr>
+          <template v-for="it in rows" :key="it.sid">
+            <tr>
+              <td>{{ it.name }} ({{ it.sid }})</td>
+              <td>{{ (it.consume_min==null||it.consume_max==null)? '-' : (it.consume_min + ' - ' + it.consume_max) }}</td>
+              <td>{{ (it.deal_min==null||it.deal_max==null)? '-' : (it.deal_min + ' - ' + it.deal_max) }}</td>
+              <td>
+                <button @click="toggle(it.sid)">{{ state.expanded[it.sid] ? '收起' : '展开' }}</button>
+              </td>
+            </tr>
+            <tr v-if="state.expanded[it.sid]">
+              <td colspan="4">
+                <div>
+                  <h3>消耗明细</h3>
+                  <div v-for="grp in detailsMap[it.sid].consume" :key="grp.label" style="margin-bottom:12px">
+                    <h4>{{ grp.label }}</h4>
+                    <table>
+                      <thead>
+                        <tr><th>级次</th><th>值</th><th>差值</th><th>跃迁</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="v in grp.rows" :key="v.level_index">
+                          <td>{{ v.level_index }}</td>
+                          <td>{{ v.value }}</td>
+                          <td>{{ v.diff_to_prev==null? '-' : v.diff_to_prev }}</td>
+                          <td>{{ v.is_jump ? '✓' : '' }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <h3>造成明细</h3>
+                  <div v-for="grp in detailsMap[it.sid].deal" :key="grp.label" style="margin-bottom:12px">
+                    <h4>{{ grp.label }}</h4>
+                    <table>
+                      <thead>
+                        <tr><th>级次</th><th>值</th><th>差值</th><th>跃迁</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="v in grp.rows" :key="v.level_index">
+                          <td>{{ v.level_index }}</td>
+                          <td>{{ v.value }}</td>
+                          <td>{{ v.diff_to_prev==null? '-' : v.diff_to_prev }}</td>
+                          <td>{{ v.is_jump ? '✓' : '' }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <h3 v-if="detailsMap[it.sid].other.length">其他明细</h3>
+                  <div v-for="grp in detailsMap[it.sid].other" :key="grp.label" style="margin-bottom:12px">
+                    <h4>{{ grp.label }}</h4>
+                    <table>
+                      <thead>
+                        <tr><th>级次</th><th>值</th><th>差值</th><th>跃迁</th></tr>
+                      </thead>
+                      <tbody>
+                        <tr v-for="v in grp.rows" :key="v.level_index">
+                          <td>{{ v.level_index }}</td>
+                          <td>{{ v.value }}</td>
+                          <td>{{ v.diff_to_prev==null? '-' : v.diff_to_prev }}</td>
+                          <td>{{ v.is_jump ? '✓' : '' }}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </template>
         </tbody>
       </table>
-      <div style="margin-top:12px">
-        <table v-if="details.length">
-          <thead>
-            <tr><th>级次</th><th>值</th><th>差值</th><th>跃迁</th></tr>
-          </thead>
-          <tbody>
-            <tr v-for="v in details" :key="v.level_index">
-              <td>{{ v.level_index }}</td>
-              <td>{{ v.value }}</td>
-              <td>{{ v.diff_to_prev==null? '-' : v.diff_to_prev }}</td>
-              <td>{{ v.is_jump ? '✓' : '' }}</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div style="margin-top:12px"></div>
     </section>
   `
 }).mount('#app')

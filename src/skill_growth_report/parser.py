@@ -4,13 +4,16 @@ from typing import List, Dict, Any, Tuple
 
 def find_skills(text: str) -> List[Tuple[str, str, int, int]]:
     res: List[Tuple[str, str, int, int]] = []
-    for m in re.finditer(r"(^|\n)\s*([^\n\-]+?)\s*-\s*(\d{5})\s*(?=\n)", text):
+    matches = list(re.finditer(r"(^|\n)\s*([^\n\-]+?)\s*-\s*(\d{5})\s*(?=\n)", text))
+    for i, m in enumerate(matches):
+        name = m.group(2).strip()
+        sid = m.group(3).strip()
         start = m.end()
-        res.append((m.group(2).strip(), m.group(3).strip(), start, -1))
-    for i in range(len(res)):
-        s = res[i]
-        end = len(text) if i == len(res) - 1 else res[i + 1][2] - len("\n")
-        res[i] = (s[0], s[1], s[2], end)
+        if i < len(matches) - 1:
+            end = matches[i+1].start()
+        else:
+            end = len(text)
+        res.append((name, sid, start, end))
     return res
 
 
@@ -32,6 +35,21 @@ def _parse_numbers(seq: str) -> List[float]:
         except Exception:
             pass
     return vals
+
+
+def extract_description(block: str) -> str:
+    lines = block.split('\n')
+    desc_lines = []
+    for line in lines:
+        l = line.strip()
+        if not l:
+            continue
+        if l.startswith('<') and '>' in l and ('点' in l or '伤害' in l):
+            break
+        if "招式到达三重" in l or "招式达到三重" in l:
+            break
+        desc_lines.append(l)
+    return "\n".join(desc_lines)
 
 
 def extract_sequences(block: str) -> List[Dict[str, Any]]:

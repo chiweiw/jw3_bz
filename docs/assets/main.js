@@ -1,14 +1,7 @@
 const { createApp, reactive, onMounted, ref, nextTick } = Vue;
 
 function loadJson(name){
-  if(location.protocol==='file:'){
-    if(name==='skills' && window.SKILLS) return Promise.resolve(window.SKILLS)
-    if(name==='series' && window.SERIES) return Promise.resolve(window.SERIES)
-    if(name==='values' && window.VALUES) return Promise.resolve(window.VALUES)
-    if(name==='analysis' && window.ANALYSIS) return Promise.resolve(window.ANALYSIS)
-  }
-  const base = window.DATA_BASE || 'data'
-  return fetch(`${base}/${name}.json`).then(r=>{if(!r.ok) throw new Error('加载失败'); return r.json()})
+  return fetch(`data/${name}.json`).then(r=>{if(!r.ok) throw new Error('加载失败'); return r.json()})
 }
 
 createApp({

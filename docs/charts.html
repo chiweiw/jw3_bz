@@ -4,25 +4,50 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>技能数据图表</title>
-  <link rel="stylesheet" href="assets/style.css" />
-  <style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif}</style>
+  <link rel="stylesheet" href="assets/reset.min.css" />
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif;background:#f0f2f5}
+    .site-layout-content { min-height: 280px; padding: 24px; background: #fff; }
+  </style>
   <script>window.PAGE='charts'</script>
   <script>window.DATA_BASE='data'</script>
+  <script src="assets/dayjs.min.js"></script>
+  <script src="assets/vue.global.prod.js"></script>
+  <script src="assets/antd.min.js"></script>
   <script src="assets/echarts.min.js"></script>
   <script>(function(){if(location.protocol==='file:'){['skills','series','values','analysis'].forEach(function(n){var s=document.createElement('script');s.src='data/'+n+'.js';document.head.appendChild(s)})}})()</script>
-  </head>
+</head>
 <body>
-  <header>
-    <h1>技能数据图表</h1>
-    <div class="filters">
-      <input id="q" placeholder="搜索技能名称或ID" />
-      <button id="drawBtn">绘制</button>
-      <label><input type="checkbox" id="showDiff">差值曲线</label>
-    </div>
-  </header>
-  <main>
-    <div id="chart" style="height:600px"></div>
-  </main>
+  <div id="app">
+    <a-layout class="layout">
+      <a-layout-header>
+        <div style="float:left;color:#fff;font-size:18px;font-weight:bold;margin-right:30px">技能数据报告</div>
+        <a-menu theme="dark" mode="horizontal" :style="{ lineHeight: '64px' }" v-model:selected-keys="selectedKeys">
+          <a-menu-item key="index"><a href="index.html">信息页</a></a-menu-item>
+          <a-menu-item key="charts"><a href="charts.html">图表页</a></a-menu-item>
+        </a-menu>
+      </a-layout-header>
+      <a-layout-content style="padding: 25px 50px">
+        <div style="background: #fff; padding: 24px; min-height: 280px">
+          <div style="margin-bottom: 16px; display: flex; gap: 16px; align-items: center;">
+            <a-input-search
+              v-model:value="state.q"
+              placeholder="搜索技能名称或ID"
+              style="width: 300px"
+              enter-button="绘制"
+              @search="apply"
+              allow-clear
+            />
+            <a-checkbox v-model:checked="state.showDiff" @change="apply">差值曲线</a-checkbox>
+          </div>
+          <div ref="chartEl" style="height:600px; width: 100%;"></div>
+        </div>
+      </a-layout-content>
+      <a-layout-footer style="text-align: center">
+        Skill Growth Report ©2025 Created by Trae
+      </a-layout-footer>
+    </a-layout>
+  </div>
   <script src="assets/main.js"></script>
 </body>
 </html>

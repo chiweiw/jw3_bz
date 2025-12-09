@@ -4,24 +4,118 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>技能数据增长报告</title>
-  <link rel="stylesheet" href="assets/style.css" />
-  <style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif}</style>
+  <link rel="stylesheet" href="assets/reset.min.css" />
+  <style>
+    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif;background:#f0f2f5}
+    .site-layout-content { min-height: 280px; padding: 24px; background: #fff; }
+    #components-layout-demo-top .logo { float: left; width: 120px; height: 31px; margin: 16px 24px 16px 0; background: rgba(255, 255, 255, 0.3); }
+  </style>
   <script>window.PAGE='index'</script>
   <script>window.DATA_BASE='data'</script>
+  <script src="assets/dayjs.min.js"></script>
   <script src="assets/vue.global.prod.js"></script>
+  <script src="assets/antd.min.js"></script>
   <script>(function(){if(location.protocol==='file:'){['skills','series','values','analysis'].forEach(function(n){var s=document.createElement('script');s.src='data/'+n+'.js';document.head.appendChild(s)})}})()</script>
-  </head>
+</head>
 <body>
-  <header>
-    <nav style="display:flex;align-items:center;gap:12px">
-      <strong>技能数据增长报告</strong>
-      <a href="index.html">信息页</a>
-      <a href="charts.html">图表页</a>
-    </nav>
-  </header>
-  <main>
-    <div id="app"></div>
-  </main>
+  <div id="app">
+    <a-layout class="layout">
+      <a-layout-header>
+        <div style="float:left;color:#fff;font-size:18px;font-weight:bold;margin-right:30px">技能数据报告</div>
+        <a-menu theme="dark" mode="horizontal" :style="{ lineHeight: '64px' }" v-model:selected-keys="selectedKeys">
+          <a-menu-item key="index"><a href="index.html">信息页</a></a-menu-item>
+          <a-menu-item key="charts"><a href="charts.html">图表页</a></a-menu-item>
+        </a-menu>
+      </a-layout-header>
+      <a-layout-content style="padding: 25px 50px">
+        <div style="background: #fff; padding: 24px; min-height: 280px">
+          <div style="margin-bottom: 16px; display: flex; gap: 16px;">
+            <a-input-search
+              v-model:value="state.q"
+              placeholder="搜索技能名称或ID"
+              style="width: 300px"
+              enter-button
+              allow-clear
+            />
+          </div>
+          <a-table 
+            :columns="columns" 
+            :data-source="rows" 
+            :pagination="{ pageSize: 20 }"
+            row-key="sid"
+            :expand-column-width="50"
+          >
+            <template #bodyCell="{ column, record }">
+              <template v-if="column.key === 'name'">
+                <b>{{ record.name }}</b> <span style="color:#888;font-size:12px">({{ record.sid }})</span>
+                <a-tag v-if="record.meta?.has_threefold" color="purple" style="margin-left:8px">三重效果</a-tag>
+                <a-tag v-if="record.meta?.steal_spirit" color="cyan">偷取精神</a-tag>
+              </template>
+              <template v-else-if="column.key === 'consume'">
+                <template v-if="record.consume_min != null">
+                  <a-tag :color="record.consume_min===0 && record.consume_max===0 ? 'green' : 'default'">
+                    {{ record.consume_min }} - {{ record.consume_max }}
+                  </a-tag>
+                  <span v-if="record.meta?.threefold_no_spirit_cost" style="font-size:12px;color:#52c41a"> (三重免费)</span>
+                </template>
+                <span v-else>-</span>
+              </template>
+              <template v-else-if="column.key === 'deal'">
+                <a-tag color="blue" v-if="record.deal_min != null">{{ record.deal_min }} - {{ record.deal_max }}</a-tag>
+                <span v-else>-</span>
+              </template>
+            </template>
+            
+            <template #expandedRowRender="{ record }">
+              <div style="padding: 10px; background: #fafafa; border-radius: 4px;">
+                <a-tabs>
+                  <a-tab-pane key="1" tab="消耗明细" v-if="detailsMap[record.sid].consume.length">
+                    <div v-for="grp in detailsMap[record.sid].consume" :key="grp.label" style="margin-bottom:16px">
+                      <h4 style="margin-bottom:8px;font-weight:bold;color:#666">{{ grp.label }}</h4>
+                      <a-table :columns="detailColumns" :data-source="grp.rows" :pagination="false" size="small" bordered>
+                         <template #bodyCell="{ column, record: r }">
+                           <template v-if="column.key === 'is_jump'">
+                             <a-tag v-if="r.is_jump" color="red">跃迁</a-tag>
+                           </template>
+                         </template>
+                      </a-table>
+                    </div>
+                  </a-tab-pane>
+                  <a-tab-pane key="2" tab="造成明细" v-if="detailsMap[record.sid].deal.length">
+                     <div v-for="grp in detailsMap[record.sid].deal" :key="grp.label" style="margin-bottom:16px">
+                      <h4 style="margin-bottom:8px;font-weight:bold;color:#666">{{ grp.label }}</h4>
+                      <a-table :columns="detailColumns" :data-source="grp.rows" :pagination="false" size="small" bordered>
+                         <template #bodyCell="{ column, record: r }">
+                           <template v-if="column.key === 'is_jump'">
+                             <a-tag v-if="r.is_jump" color="red">跃迁</a-tag>
+                           </template>
+                         </template>
+                      </a-table>
+                    </div>
+                  </a-tab-pane>
+                  <a-tab-pane key="3" tab="其他明细" v-if="detailsMap[record.sid].other.length">
+                     <div v-for="grp in detailsMap[record.sid].other" :key="grp.label" style="margin-bottom:16px">
+                      <h4 style="margin-bottom:8px;font-weight:bold;color:#666">{{ grp.label }}</h4>
+                      <a-table :columns="detailColumns" :data-source="grp.rows" :pagination="false" size="small" bordered>
+                         <template #bodyCell="{ column, record: r }">
+                           <template v-if="column.key === 'is_jump'">
+                             <a-tag v-if="r.is_jump" color="red">跃迁</a-tag>
+                           </template>
+                         </template>
+                      </a-table>
+                    </div>
+                  </a-tab-pane>
+                </a-tabs>
+              </div>
+            </template>
+          </a-table>
+        </div>
+      </a-layout-content>
+      <a-layout-footer style="text-align: center">
+        Skill Growth Report ©2025 Created by Trae
+      </a-layout-footer>
+    </a-layout>
+  </div>
   <script src="assets/vue-app.js"></script>
 </body>
 </html>

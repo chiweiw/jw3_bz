@@ -14,7 +14,7 @@ def write_json(fp: Path, data: Any) -> None:
 def export_all(site_dir: Path, skills: List[Dict[str, Any]], series: List[Dict[str, Any]], values: Dict[str, List[Dict[str, Any]]], analyses: Dict[str, Dict[str, Any]]) -> None:
     data_dir = site_dir / "data"
     ensure_dir(data_dir)
-    skills_out = [{"skill_id": s["skill_id"], "name": s["name"], "meta": s.get("meta", {}), "description": s.get("description", "")} for s in skills]
+    skills_out = [{"skill_id": s["skill_id"], "name": s["name"], "meta": s.get("meta", {}), "description": s.get("description", ""), "desc_template": s.get("desc_template", ""), "special_effects": s.get("special_effects", []), "full_text": s.get("full_text", ""), "groups": s.get("groups", {})} for s in skills]
     write_json(data_dir / "skills.json", skills_out)
     write_json(
         data_dir / "series.json",

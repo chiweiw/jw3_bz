@@ -76,15 +76,10 @@ def extract_description(block: str) -> str:
         l = line.strip()
         if not l:
             continue
-        if l.startswith('<') and '>' in l and ('点' in l or '伤害' in l):
-            break
-        if "招式到达三重" in l or "招式达到三重" in l:
-            break
         desc_lines.append(l)
     sanitized: List[str] = []
     for l in desc_lines:
-        x = re.sub(r"<[^>]*>", "", l)
-        x = re.sub(r"[0-9]+(?:[.,][0-9]+)?", "", x)
+        x = re.sub(r"<[^>]*>", "<>", l)
         x = re.sub(r"\s{2,}", " ", x).strip()
         sanitized.append(x)
     return "\n".join(sanitized)
@@ -114,18 +109,40 @@ def extract_special_effects(block: str) -> List[str]:
     lines = [l.strip() for l in block.split("\n") if l.strip()]
     res: List[str] = []
     for l in lines:
-        if l.startswith("<") and ">" in l and ("点" in l or "伤害" in l):
+        if "<" in l and ">" in l and ("点" in l or "伤害" in l):
             continue
-        if l.startswith("被动效果"):
-            res.append(l)
+        if ("招式到达三重" in l or "招式达到三重" in l) and not ("若" in l or "当" in l):
             continue
-        if l.startswith("若命中目标") or l.startswith("若目标"):
-            res.append(l)
-            continue
-        if l.startswith("当命中") or l.startswith("招式命中目标"):
-            res.append(l)
-            continue
-        if l.startswith("当门派为") or l.startswith("当门派兵器为") or l.startswith("当使用者为"):
-            res.append(l)
-            continue
+        triggers = [
+            "被动效果",
+            "若命中目标",
+            "若招式命中目标",
+            "若目标",
+            "当命中",
+            "招式命中目标",
+            "命中目标，则",
+            "命中目标则",
+            "当门派为",
+            "当门派兵器为",
+            "当使用者为",
+            "当心法为",
+            "若使用者门派兵器为",
+            "若使用者门派为",
+            "若使用者心法为",
+            "若心法为",
+            "目标气血值低于",
+            "目标气血值高于",
+            "若释放时",
+            "若招式会心",
+            "若招式击破",
+            "若选中敌对非侠士目标",
+            "目标精神高于",
+            "目标精神低于",
+            "目标耐力高于",
+            "目标耐力低于",
+        ]
+        for t in triggers:
+            if t in l:
+                res.append(l)
+                break
     return res

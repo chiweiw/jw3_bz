@@ -56,17 +56,23 @@
             :columns="columns" 
             :data-source="rows" 
             :pagination="{ pageSize: 20 }"
-            row-key="sid"
+            :row-key="r => r.sid"
             :expand-column-width="50"
+            :expanded-row-keys="expandedRowKeys"
+            :expand-row-by-click="true"
+            @expand="onExpand"
           >
             <template #bodyCell="{ column, record }">
               <template v-if="column.key === 'name'">
-                <b>{{ record.name }}</b> <span style="color:#888;font-size:12px">({{ record.sid }})</span>
+                <a-button type="link" @click="toggle(record.sid)">{{ record.name }}</a-button> <span style="color:#888;font-size:12px">({{ record.sid }})</span>
                 <a-tag v-if="record.meta?.has_threefold" color="purple" style="margin-left:8px">三重效果</a-tag>
                 <a-tag v-if="record.meta?.steal_spirit" color="cyan">偷取精神</a-tag>
               </template>
               <template v-else-if="column.key === 'description'">
                 <span style="color:#666;font-size:13px">{{ record.description }}</span>
+              </template>
+              <template v-else-if="column.key === 'effects'">
+                <span style="color:#666;font-size:13px">{{ record.effects_text || '-' }}</span>
               </template>
               <template v-else-if="column.key === 'consume'">
                 <template v-if="record.consume_min != null">
@@ -80,6 +86,9 @@
               <template v-else-if="column.key === 'deal'">
                 <a-tag color="blue" v-if="record.deal_min != null">{{ record.deal_min }} - {{ record.deal_max }}</a-tag>
                 <span v-else>-</span>
+              </template>
+              <template v-else>
+                <span>{{ record[column.dataIndex] ?? '-' }}</span>
               </template>
             </template>
             

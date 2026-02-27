@@ -4,13 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>技能数据增长报告</title>
-  <link rel="stylesheet" href="assets/reset.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ant-design-vue@3.2.20/dist/antd.min.css" />
-  <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Microsoft YaHei,Helvetica,Arial,sans-serif;background:#f0f2f5}
-    .site-layout-content { min-height: 280px; padding: 24px; background: #fff; }
-    #components-layout-demo-top .logo { float: left; width: 120px; height: 31px; margin: 16px 24px 16px 0; background: rgba(255, 255, 255, 0.3); }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script>window.PAGE='index'</script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/plugin/customParseFormat.js"></script>
@@ -28,119 +22,291 @@
     if(window.dayjs_plugin_advancedFormat) dayjs.extend(window.dayjs_plugin_advancedFormat);
   </script>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.prod.js"></script>
-  <script src="assets/antd.min.js"></script>
-  <script src="assets/deps.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: #f1f1f1; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    .highlight { background: linear-gradient(120deg, #fef08a 0%, #fde047 100%); border-radius: 2px; padding: 0 2px; }
+  </style>
 </head>
-<body>
-  <div id="app">
-    <a-layout class="layout">
-      <a-layout-header>
-        <div style="float:left;color:#fff;font-size:18px;font-weight:bold;margin-right:30px">技能数据报告</div>
-        <a-menu theme="dark" mode="horizontal" :style="{ lineHeight: '64px' }" v-model:selected-keys="selectedKeys">
-          <a-menu-item key="index"><a href="index.html">信息页</a></a-menu-item>
-          <a-menu-item key="charts"><a href="charts.html">图表页</a></a-menu-item>
-        </a-menu>
-      </a-layout-header>
-      <a-layout-content style="padding: 25px 50px">
-        <div style="background: #fff; padding: 24px; min-height: 280px">
-          <div style="margin-bottom: 16px; display: flex; gap: 16px;">
-            <a-input-search
-              v-model:value="state.q"
-              placeholder="搜索技能名称或ID"
-              style="width: 300px"
-              enter-button
-              allow-clear
-            />
+<body class="bg-gray-50 text-gray-900 antialiased">
+  <div id="app" class="min-h-screen flex flex-col">
+    <header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center gap-2">
+             <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-sm">S</div>
+             <div class="text-xl font-bold text-gray-900 tracking-tight">技能数据报告</div>
           </div>
-          <a-table 
-            :columns="columns" 
-            :data-source="rows" 
-            :pagination="{ pageSize: 20 }"
-            :row-key="r => r.sid"
-            :expand-column-width="50"
-            :expanded-row-keys="expandedRowKeys"
-            :expand-row-by-click="true"
-            @expand="onExpand"
-          >
-            <template #bodyCell="{ column, record }">
-              <template v-if="column.key === 'name'">
-                <a-button type="link" @click="toggle(record.sid)">{{ record.name }}</a-button> <span style="color:#888;font-size:12px">({{ record.sid }})</span>
-                <a-tag v-if="record.meta?.has_threefold" color="purple" style="margin-left:8px">三重效果</a-tag>
-                <a-tag v-if="record.meta?.steal_spirit" color="cyan">偷取精神</a-tag>
-              </template>
-              <template v-else-if="column.key === 'description'">
-                <span style="color:#666;font-size:13px">{{ record.description }}</span>
-              </template>
-              <template v-else-if="column.key === 'effects'">
-                <span style="color:#666;font-size:13px">{{ record.effects_text || '-' }}</span>
-              </template>
-              <template v-else-if="column.key === 'consume'">
-                <template v-if="record.consume_min != null">
-                  <a-tag :color="record.consume_min===0 && record.consume_max===0 ? 'green' : 'default'">
-                    {{ record.consume_min }} - {{ record.consume_max }}
-                  </a-tag>
-                  <span v-if="record.meta?.threefold_no_spirit_cost" style="font-size:12px;color:#52c41a"> (三重免费)</span>
-                </template>
-                <span v-else>-</span>
-              </template>
-              <template v-else-if="column.key === 'deal'">
-                <a-tag color="blue" v-if="record.deal_min != null">{{ record.deal_min }} - {{ record.deal_max }}</a-tag>
-                <span v-else>-</span>
-              </template>
-              <template v-else>
-                <span>{{ record[column.dataIndex] ?? '-' }}</span>
-              </template>
-            </template>
-            
-            <template #expandedRowRender="{ record }">
-              <div style="padding: 10px; background: #fafafa; border-radius: 4px;">
-                <a-tabs>
-                  <a-tab-pane key="1" tab="消耗明细" v-if="detailsMap[record.sid].consume.length">
-                    <div v-for="grp in detailsMap[record.sid].consume" :key="grp.label" style="margin-bottom:16px">
-                      <h4 style="margin-bottom:8px;font-weight:bold;color:#666">{{ grp.label }}</h4>
-                      <a-table :columns="detailColumns" :data-source="grp.rows" :pagination="false" size="small" bordered>
-                         <template #bodyCell="{ column, record: r }">
-                           <template v-if="column.key === 'is_jump'">
-                             <a-tag v-if="r.is_jump" color="red">跃迁</a-tag>
-                           </template>
-                         </template>
-                      </a-table>
-                    </div>
-                  </a-tab-pane>
-                  <a-tab-pane key="2" tab="造成明细" v-if="detailsMap[record.sid].deal.length">
-                     <div v-for="grp in detailsMap[record.sid].deal" :key="grp.label" style="margin-bottom:16px">
-                      <h4 style="margin-bottom:8px;font-weight:bold;color:#666">{{ grp.label }}</h4>
-                      <a-table :columns="detailColumns" :data-source="grp.rows" :pagination="false" size="small" bordered>
-                         <template #bodyCell="{ column, record: r }">
-                           <template v-if="column.key === 'is_jump'">
-                             <a-tag v-if="r.is_jump" color="red">跃迁</a-tag>
-                           </template>
-                         </template>
-                      </a-table>
-                    </div>
-                  </a-tab-pane>
-                  <a-tab-pane key="3" tab="其他明细" v-if="detailsMap[record.sid].other.length">
-                     <div v-for="grp in detailsMap[record.sid].other" :key="grp.label" style="margin-bottom:16px">
-                      <h4 style="margin-bottom:8px;font-weight:bold;color:#666">{{ grp.label }}</h4>
-                      <a-table :columns="detailColumns" :data-source="grp.rows" :pagination="false" size="small" bordered>
-                         <template #bodyCell="{ column, record: r }">
-                           <template v-if="column.key === 'is_jump'">
-                             <a-tag v-if="r.is_jump" color="red">跃迁</a-tag>
-                           </template>
-                         </template>
-                      </a-table>
-                    </div>
-                  </a-tab-pane>
-                </a-tabs>
-              </div>
-            </template>
-          </a-table>
+          <nav class="flex space-x-1">
+            <a href="index.html" :class="['px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200', selectedKeys.includes('index') ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900']">信息页</a>
+            <a href="charts.html" :class="['px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200', selectedKeys.includes('charts') ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900']">图表页</a>
+          </nav>
         </div>
-      </a-layout-content>
-      <a-layout-footer style="text-align: center">
+      </div>
+    </header>
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+        <div class="p-4 border-b border-gray-100 bg-gray-50/50">
+          <div class="flex flex-wrap gap-4 items-start">
+            <div class="relative max-w-md w-full flex-1 min-w-[200px]">
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <svg class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </div>
+                <input 
+                  v-model="state.q"
+                  type="text"
+                  placeholder="搜索技能名称或ID..."
+                  class="block w-full pl-10 pr-10 py-2.5 border border-gray-300 rounded-lg leading-5 bg-white placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition duration-150 ease-in-out"
+                  @focus="showSearchHistory = true"
+                  @blur="hideSearchHistory"
+                />
+                <button 
+                  v-if="state.q"
+                  @click="state.q = ''"
+                  class="absolute inset-y-0 right-0 pr-3 flex items-center text-gray-400 hover:text-gray-600"
+                >
+                  <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd" />
+                  </svg>
+                </button>
+              </div>
+              <div v-if="showSearchHistory && searchHistory.length && !state.q" class="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-10 max-h-48 overflow-y-auto">
+                <div class="px-3 py-2 text-xs text-gray-500 border-b border-gray-100">搜索历史</div>
+                <div v-for="(item, idx) in searchHistory" :key="idx" @mousedown="selectHistory(item)" class="px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 cursor-pointer flex items-center justify-between">
+                  <span>{{ item }}</span>
+                  <button @mousedown.stop="removeHistory(idx)" class="text-gray-400 hover:text-red-500">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="flex gap-2 flex-wrap">
+              <label class="inline-flex items-center px-3 py-2 rounded-lg border cursor-pointer transition-colors" :class="state.filterThreefold ? 'bg-purple-50 border-purple-300 text-purple-700' : 'bg-white border-gray-300 text-gray-600 hover:bg-gray-50'">
+                <input type="checkbox" v-model="state.filterThreefold" class="sr-only" />
+                <span class="text-sm font-medium">三重效果</span>
+              </label>
+              <label class="inline-flex items-center px-3 py-2 rounded-lg border cursor-pointer transition-colors" :class="state.filterStealSpirit ? 'bg-cyan-50 border-cyan-300 text-cyan-700' : 'bg-white border-gray-300 text-gray-600 hover:bg-gray-50'">
+                <input type="checkbox" v-model="state.filterStealSpirit" class="sr-only" />
+                <span class="text-sm font-medium">偷取精神</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="overflow-x-auto">
+          <table class="min-w-full divide-y divide-gray-200">
+            <thead class="bg-gray-50 sticky top-[64px]">
+              <tr>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider w-56 cursor-pointer hover:bg-gray-100 select-none" @click="toggleSort('name')">
+                  <div class="flex items-center gap-1">
+                    技能
+                    <svg v-if="state.sortKey === 'name'" class="w-4 h-4" :class="state.sortOrder === 'desc' ? 'rotate-180' : ''" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                  </div>
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">技能描述</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider">特殊效果</th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider w-40 cursor-pointer hover:bg-gray-100 select-none" @click="toggleSort('consume')">
+                  <div class="flex items-center gap-1">
+                    消耗区间
+                    <svg v-if="state.sortKey === 'consume'" class="w-4 h-4" :class="state.sortOrder === 'desc' ? 'rotate-180' : ''" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                  </div>
+                </th>
+                <th scope="col" class="px-6 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider w-40 cursor-pointer hover:bg-gray-100 select-none" @click="toggleSort('deal')">
+                  <div class="flex items-center gap-1">
+                    造成区间
+                    <svg v-if="state.sortKey === 'deal'" class="w-4 h-4" :class="state.sortOrder === 'desc' ? 'rotate-180' : ''" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+                  </div>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="bg-white divide-y divide-gray-200">
+              <template v-for="record in sortedRows" :key="record.sid">
+                <tr class="hover:bg-blue-50/30 transition-colors duration-150 cursor-pointer group" @click="toggle(record.sid)">
+                  <td class="px-6 py-4">
+                    <div class="flex flex-col">
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm font-semibold text-blue-600 group-hover:text-blue-700" v-html="highlightText(record.name, state.q)"></span>
+                            <span class="text-xs text-gray-400 font-mono bg-gray-100 px-1.5 py-0.5 rounded">{{ record.sid }}</span>
+                        </div>
+                        <div class="flex flex-wrap gap-1 mt-1.5">
+                             <span v-if="record.meta?.has_threefold" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-700 border border-purple-200">三重效果</span>
+                             <span v-if="record.meta?.steal_spirit" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-cyan-100 text-cyan-700 border border-cyan-200">偷取精神</span>
+                        </div>
+                    </div>
+                  </td>
+                  <td class="px-6 py-4 text-sm text-gray-600 leading-relaxed">{{ record.description }}</td>
+                  <td class="px-6 py-4 text-sm text-gray-600">
+                    <span v-if="record.effects_text" class="inline-block bg-gray-100 px-2 py-1 rounded text-gray-700 text-xs">{{ record.effects_text }}</span>
+                    <span v-else class="text-gray-300">-</span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <template v-if="record.consume_min != null">
+                      <span :class="['inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border', getConsumeColorClass(record.consume_min, record.consume_max)]">
+                        {{ record.consume }}
+                      </span>
+                      <div v-if="record.meta?.threefold_no_spirit_cost" class="text-xs text-green-600 mt-1 flex items-center">
+                        <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                        三重免费
+                      </div>
+                    </template>
+                    <span v-else class="text-gray-300">-</span>
+                  </td>
+                  <td class="px-6 py-4 whitespace-nowrap">
+                    <span v-if="record.deal_min != null" :class="['inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border', getDealColorClass(record.deal_min, record.deal_max)]">{{ record.deal }}</span>
+                    <span v-else class="text-gray-300">-</span>
+                  </td>
+                </tr>
+                <tr v-if="expandedRowKeys.includes(record.sid)">
+                  <td colspan="5" class="px-6 py-4 bg-gray-50 border-t border-gray-100">
+                  <div class="bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+                    <div class="p-6 space-y-6">
+                        <div>
+                          <h3 @click="toggleSection(record.sid, 'consume')" class="text-base font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 flex items-center gap-2 cursor-pointer select-none hover:bg-gray-50 rounded px-2 -mx-2 transition-colors">
+                            <span class="w-1.5 h-1.5 rounded-full bg-orange-500"></span>
+                            消耗明细
+                            <div class="ml-auto flex items-center">
+                                <span v-if="!detailsMap[record.sid].consume.length" class="text-xs text-gray-400 font-normal">无数据</span>
+                                <svg v-else :class="{'rotate-180': sectionExpanded[record.sid]?.consume}" class="w-4 h-4 text-gray-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                          </h3>
+                          <div v-show="sectionExpanded[record.sid]?.consume && detailsMap[record.sid].consume.length">
+                              <div v-for="grp in detailsMap[record.sid].consume" :key="grp.label" class="mb-6 last:mb-0 pl-4 border-l-2 border-gray-100">
+                                <h4 class="mb-3 font-bold text-gray-700 text-sm">{{ grp.label }}</h4>
+                                <div class="overflow-hidden border border-gray-200 rounded-lg">
+                                    <table class="min-w-full divide-y divide-gray-200">
+                                      <thead class="bg-gray-50">
+                                        <tr>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase w-24">级次</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">数值</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">差值</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase w-24">跃迁</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="bg-white divide-y divide-gray-200">
+                                        <tr v-for="r in grp.rows" :key="r.level_index" class="text-sm hover:bg-gray-50">
+                                          <td class="px-4 py-2 font-mono text-gray-500">{{ r.level_index }}</td>
+                                          <td class="px-4 py-2 font-medium text-gray-900">{{ r.value_formatted }}</td>
+                                          <td class="px-4 py-2 text-gray-500">{{ r.diff_to_prev_formatted }}</td>
+                                          <td class="px-4 py-2">
+                                            <span v-if="r.is_jump" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-700">跃迁</span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div>
+                          <h3 @click="toggleSection(record.sid, 'deal')" class="text-base font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 flex items-center gap-2 cursor-pointer select-none hover:bg-gray-50 rounded px-2 -mx-2 transition-colors">
+                            <span class="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
+                            造成明细
+                            <div class="ml-auto flex items-center">
+                                <span v-if="!detailsMap[record.sid].deal.length" class="text-xs text-gray-400 font-normal">无数据</span>
+                                <svg v-else :class="{'rotate-180': sectionExpanded[record.sid]?.deal}" class="w-4 h-4 text-gray-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                          </h3>
+                          <div v-show="sectionExpanded[record.sid]?.deal && detailsMap[record.sid].deal.length">
+                              <div v-for="grp in detailsMap[record.sid].deal" :key="grp.label" class="mb-6 last:mb-0 pl-4 border-l-2 border-gray-100">
+                                <h4 class="mb-3 font-bold text-gray-700 text-sm">{{ grp.label }}</h4>
+                                <div class="overflow-hidden border border-gray-200 rounded-lg">
+                                    <table class="min-w-full divide-y divide-gray-200">
+                                      <thead class="bg-gray-50">
+                                        <tr>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase w-24">级次</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">数值</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">差值</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase w-24">跃迁</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="bg-white divide-y divide-gray-200">
+                                        <tr v-for="r in grp.rows" :key="r.level_index" class="text-sm hover:bg-gray-50">
+                                          <td class="px-4 py-2 font-mono text-gray-500">{{ r.level_index }}</td>
+                                          <td class="px-4 py-2 font-medium text-gray-900">{{ r.value_formatted }}</td>
+                                          <td class="px-4 py-2 text-gray-500">{{ r.diff_to_prev_formatted }}</td>
+                                          <td class="px-4 py-2">
+                                            <span v-if="r.is_jump" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-700">跃迁</span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div>
+                          <h3 @click="toggleSection(record.sid, 'other')" class="text-base font-bold text-gray-900 mb-4 pb-2 border-b border-gray-100 flex items-center gap-2 cursor-pointer select-none hover:bg-gray-50 rounded px-2 -mx-2 transition-colors">
+                            <span class="w-1.5 h-1.5 rounded-full bg-gray-500"></span>
+                            其他明细
+                            <div class="ml-auto flex items-center">
+                                <span v-if="!detailsMap[record.sid].other.length" class="text-xs text-gray-400 font-normal">无数据</span>
+                                <svg v-else :class="{'rotate-180': sectionExpanded[record.sid]?.other}" class="w-4 h-4 text-gray-400 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </div>
+                          </h3>
+                          <div v-show="sectionExpanded[record.sid]?.other && detailsMap[record.sid].other.length">
+                              <div v-for="grp in detailsMap[record.sid].other" :key="grp.label" class="mb-6 last:mb-0 pl-4 border-l-2 border-gray-100">
+                                <h4 class="mb-3 font-bold text-gray-700 text-sm">{{ grp.label }}</h4>
+                                <div class="overflow-hidden border border-gray-200 rounded-lg">
+                                    <table class="min-w-full divide-y divide-gray-200">
+                                      <thead class="bg-gray-50">
+                                        <tr>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase w-24">级次</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">数值</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">差值</th>
+                                          <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase w-24">跃迁</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody class="bg-white divide-y divide-gray-200">
+                                        <tr v-for="r in grp.rows" :key="r.level_index" class="text-sm hover:bg-gray-50">
+                                          <td class="px-4 py-2 font-mono text-gray-500">{{ r.level_index }}</td>
+                                          <td class="px-4 py-2 font-medium text-gray-900">{{ r.value_formatted }}</td>
+                                          <td class="px-4 py-2 text-gray-500">{{ r.diff_to_prev_formatted }}</td>
+                                          <td class="px-4 py-2">
+                                            <span v-if="r.is_jump" class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-red-100 text-red-700">跃迁</span>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              </template>
+            </tbody>
+          </table>
+          <div v-if="sortedRows.length === 0" class="text-center py-12">
+            <svg class="mx-auto h-12 w-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p class="mt-2 text-sm text-gray-500">没有找到匹配的技能</p>
+          </div>
+        </div>
+        <div class="px-6 py-3 bg-gray-50 border-t border-gray-100 text-sm text-gray-500">
+          共 {{ sortedRows.length }} 条记录
+        </div>
+      </div>
+    </main>
+    <footer class="bg-white border-t border-gray-200 mt-auto">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center text-gray-500 text-sm">
         Skill Growth Report ©2025 Created by Trae
-      </a-layout-footer>
-    </a-layout>
+      </div>
+    </footer>
   </div>
   <script src="assets/index.js"></script>
 </body>
